@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Centrum Prizren</title>
+
+    <!-- Preconnect to external CDNs -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://db.onlinewebfonts.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+    <!-- Preload critical assets -->
+    <link rel="preload" href="assets/DSC09338.jpg" as="image" fetchpriority="high">
+    <link rel="preload" href="assets/Logo.png" as="image">
+
+    <!-- Non-blocking font loading -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&display=swap"></noscript>
+    <link rel="stylesheet" href="https://db.onlinewebfonts.com/c/19560807c484bbbfcd37de7a0011a829?family=Canela-Light" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://db.onlinewebfonts.com/c/19560807c484bbbfcd37de7a0011a829?family=Canela-Light"></noscript>
+
+    <!-- Non-blocking datepicker CSS (below-fold feature) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.3.4/dist/css/datepicker.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.3.4/dist/css/datepicker.min.css"></noscript>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <img src="assets/Logo.png" alt="Hotel Centrum Logo" style="height: 60px; width: auto; filter: brightness(0) invert(1);">
+        </div>
+        <div class="header-center">
+            <div class="brand-title">HOTEL CENTRUM</div>
+            <div class="brand-subtitle"></div>
+            <div class="brand-title">PRIZREN</div>
+        </div>
+        <button class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2 class="hero-subtitle">Stay at Centrum Prizren</h2>
+            <h1 class="hero-title">Comfort in Prizren's Old Town</h1>
+            <p class="hero-text">THE HOTEL</p>
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="info-section">
+        <div class="info-container">
+            <div class="info-text-wrapper">
+                <h2 class="info-title">IN THE HEART OF PRIZREN</h2>
+                <p class="info-text">Welcome to Hotel Centrum Prizren, the first hotel built to international standards in the city's post-war years. Nestled in the historic old town, just steps from the iconic Prizren Castle and centuries-old mosques and churches, our boutique hotel offers guests a unique connection to history and culture. Family-run since its founding by three brothers, Hotel Centrum blends modern comfort with authentic local charm, ensuring every stay is memorable.</p>
+            </div>
+        </div>
+        <div class="info-container">
+            <div class="info-button-wrapper">
+                <div class="o-button o-button--borders">
+                    <span class="o-button__text">Hotel Centrum Prizren</span>
+
+                    <svg class="o-button__border o-button__border--top" width="36px" height="17px" viewBox="0 0 36 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g transform="translate(-68.000000, 0.000000)" class="o-button__border-g" stroke-width="0.5">
+                                <path d="M82.8982358,16.0935809 L69.2057143,16.0935809 L76.05145,9.09473684 L82.8982358,16.0935809 Z M103.658236,16.0935809 L89.9657143,16.0935809 L96.81145,9.09473684 L103.658236,16.0935809 Z M83.0457143,16.0935809 L83.0457143,9.09473684 L89.8925001,9.09473684 L89.8925001,16.0935809 L83.0457143,16.0935809 Z M82.0571429,4.44330601 L86.4039664,1.42108547e-14 L90.7517328,4.44330601 L86.4039664,8.88661203 L82.0571429,4.44330601 Z"></path>
+                            </g>
+                        </g>
+                    </svg>
+
+                    <svg class="o-button__border o-button__border--right" width="31px" height="63px" viewBox="0 0 31 63" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g transform="translate(-143.000000, -16.000000)" class="o-button__border-g" stroke-width="0.5">
+                                <path d="M143.348571,71.7473684 L157.041093,71.7473684 L150.195357,78.7462125 L143.348571,71.7473684 Z M157.188571,71.5976881 L157.188571,57.6 L164.036407,64.598844 L157.188571,71.5976881 Z M157.188571,78.7462125 L157.188571,71.7473684 L164.036407,71.7473684 L164.036407,78.7462125 L157.188571,78.7462125 Z M157.188571,51.4620019 L157.188571,44.4631579 L164.036407,44.4631579 L164.036407,51.4620019 L157.188571,51.4620019 Z M168.455288,43.4526316 L172.801061,47.8959924 L168.455288,52.340317 L164.108571,47.8959924 L168.455288,43.4526316 Z M157.188571,38.2503196 L157.188571,24.2526316 L164.036407,31.2514756 L157.188571,38.2503196 Z M157.041093,24.1777914 L143.348571,24.1777914 L150.194307,17.1789474 L157.041093,24.1777914 Z M157.188571,24.1777914 L157.188571,17.1789474 L164.036407,17.1789474 L164.036407,24.1777914 L157.188571,24.1777914 Z"></path>
+                            </g>
+                        </g>
+                    </svg>
+
+                    <svg class="o-button__border o-button__border--bottom" width="36px" height="17px" viewBox="0 0 36 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g transform="translate(-68.000000, -79.000000)" class="o-button__border-g" stroke-width="0.5">
+                                <path d="M82.8982358,95.9251598 L69.2057143,95.9251598 L76.05145,88.9263158 L82.8982358,95.9251598 Z M103.658236,95.9251598 L89.9657143,95.9251598 L96.81145,88.9263158 L103.658236,95.9251598 Z M83.0457143,95.9251598 L83.0457143,88.9263158 L89.8925001,88.9263158 L89.8925001,95.9251598 L83.0457143,95.9251598 Z M82.0571429,84.274885 L86.4039664,79.8315789 L90.7517328,84.274885 L86.4039664,88.718191 L82.0571429,84.274885 Z" transform="translate(86.431975, 87.878369) rotate(180.000000) translate(-86.431975, -87.878369) "></path>
+                            </g>
+                        </g>
+                    </svg>
+
+                    <svg class="o-button__border o-button__border--left" width="31px" height="63px" viewBox="0 0 31 63" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g transform="translate(0.000000, -16.000000)" class="o-button__border-g" stroke-width="0.5">
+                                <path d="M0.994285714,71.7473684 L14.6868072,71.7473684 L7.84107153,78.7462125 L0.994285714,71.7473684 Z M14.8342857,71.5976881 L14.8342857,57.6 L21.6821217,64.598844 L14.8342857,71.5976881 Z M14.8342857,78.7462125 L14.8342857,71.7473684 L21.6821217,71.7473684 L21.6821217,78.7462125 L14.8342857,78.7462125 Z M14.8342857,51.4620019 L14.8342857,44.4631579 L21.6821217,44.4631579 L21.6821217,51.4620019 L14.8342857,51.4620019 Z M26.101002,43.4526316 L30.4467754,47.8959924 L26.101002,52.340317 L21.7542857,47.8959924 L26.101002,43.4526316 Z M14.8342857,38.2503196 L14.8342857,24.2526316 L21.6821217,31.2514756 L14.8342857,38.2503196 Z M14.6868072,24.1777914 L0.994285714,24.1777914 L7.84002141,17.1789474 L14.6868072,24.1777914 Z M14.8342857,24.1777914 L14.8342857,17.1789474 L21.6821217,17.1789474 L21.6821217,24.1777914 L14.8342857,24.1777914 Z" transform="translate(15.720531, 47.962580) rotate(180.000000) translate(-15.720531, -47.962580) "></path>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+                </div>
+            </div>
+        </div>
+       
+    </section>
+
+    <!-- Rooms Section -->
+    <section class="rooms-section">
+        <div class="rooms-container">
+            <div class="rooms-left">
+                <div class="rooms-overline">OUR ROOMS</div>
+                <h2 class="rooms-title">DISTINCTIVE COMFORT</h2>
+                <div class="rooms-list">
+                    <a href="pages/rooms/suite.html" class="room-item active">Suite</a>
+                    <a href="pages/rooms/double-room.html" class="room-item">Double Room</a>
+                    <a href="pages/rooms/double-room-jacuzzi.html" class="room-item">Double Room with Jacuzzi</a>
+                    <a href="pages/rooms/family-room.html" class="room-item">Family Room</a>
+                    <a href="pages/rooms/triple-room.html" class="room-item">Triple Room</a>
+                    <a href="pages/rooms/twin-room.html" class="room-item">Twin Room</a>
+                    <a href="pages/rooms/quadruple-room.html" class="room-item">Quadruple Room</a>
+                </div>
+                <div class="rooms-button-wrapper">
+                    <a href="#booking" class="o-button o-button--borders">
+                        <span class="o-button__text">Book now</span>
+                        <svg class="o-button__border o-button__border--top" width="36px" height="17px" viewBox="0 0 36 17" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g transform="translate(-68.000000, 0.000000)" class="o-button__border-g" stroke-width="0.5">
+                                    <path d="M82.8982358,16.0935809 L69.2057143,16.0935809 L76.05145,9.09473684 L82.8982358,16.0935809 Z M103.658236,16.0935809 L89.9657143,16.0935809 L96.81145,9.09473684 L103.658236,16.0935809 Z M83.0457143,16.0935809 L83.0457143,9.09473684 L89.8925001,9.09473684 L89.8925001,16.0935809 L83.0457143,16.0935809 Z M82.0571429,4.44330601 L86.4039664,1.42108547e-14 L90.7517328,4.44330601 L86.4039664,8.88661203 L82.0571429,4.44330601 Z"></path>
+                                </g>
+                            </g>
+                        </svg>
+                        <svg class="o-button__border o-button__border--right" width="31px" height="63px" viewBox="0 0 31 63" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g transform="translate(-143.000000, -16.000000)" class="o-button__border-g" stroke-width="0.5">
+                                    <path d="M143.348571,71.7473684 L157.041093,71.7473684 L150.195357,78.7462125 L143.348571,71.7473684 Z M157.188571,71.5976881 L157.188571,57.6 L164.036407,64.598844 L157.188571,71.5976881 Z M157.188571,78.7462125 L157.188571,71.7473684 L164.036407,71.7473684 L164.036407,78.7462125 L157.188571,78.7462125 Z M157.188571,51.4620019 L157.188571,44.4631579 L164.036407,44.4631579 L164.036407,51.4620019 L157.188571,51.4620019 Z M168.455288,43.4526316 L172.801061,47.8959924 L168.455288,52.340317 L164.108571,47.8959924 L168.455288,43.4526316 Z M157.188571,38.2503196 L157.188571,24.2526316 L164.036407,31.2514756 L157.188571,38.2503196 Z M157.041093,24.1777914 L143.348571,24.1777914 L150.194307,17.1789474 L157.041093,24.1777914 Z M157.188571,24.1777914 L157.188571,17.1789474 L164.036407,17.1789474 L164.036407,24.1777914 L157.188571,24.1777914 Z"></path>
+                                </g>
+                            </g>
+                        </svg>
+                        <svg class="o-button__border o-button__border--bottom" width="36px" height="17px" viewBox="0 0 36 17" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g transform="translate(-68.000000, -79.000000)" class="o-button__border-g" stroke-width="0.5">
+                                    <path d="M82.8982358,95.9251598 L69.2057143,95.9251598 L76.05145,88.9263158 L82.8982358,95.9251598 Z M103.658236,95.9251598 L89.9657143,95.9251598 L96.81145,88.9263158 L103.658236,95.9251598 Z M83.0457143,95.9251598 L83.0457143,88.9263158 L89.8925001,88.9263158 L89.8925001,95.9251598 L83.0457143,95.9251598 Z M82.0571429,84.274885 L86.4039664,79.8315789 L90.7517328,84.274885 L86.4039664,88.718191 L82.0571429,84.274885 Z" transform="translate(86.431975, 87.878369) rotate(180.000000) translate(-86.431975, -87.878369)"></path>
+                                </g>
+                            </g>
+                        </svg>
+                        <svg class="o-button__border o-button__border--left" width="31px" height="63px" viewBox="0 0 31 63" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g transform="translate(0.000000, -16.000000)" class="o-button__border-g" stroke-width="0.5">
+                                    <path d="M0.994285714,71.7473684 L14.6868072,71.7473684 L7.84107153,78.7462125 L0.994285714,71.7473684 Z M14.8342857,71.5976881 L14.8342857,57.6 L21.6821217,64.598844 L14.8342857,71.5976881 Z M14.8342857,78.7462125 L14.8342857,71.7473684 L21.6821217,71.7473684 L21.6821217,78.7462125 L14.8342857,78.7462125 Z M14.8342857,51.4620019 L14.8342857,44.4631579 L21.6821217,44.4631579 L21.6821217,51.4620019 L14.8342857,51.4620019 Z M26.101002,43.4526316 L30.4467754,47.8959924 L26.101002,52.340317 L21.7542857,47.8959924 L26.101002,43.4526316 Z M14.8342857,38.2503196 L14.8342857,24.2526316 L21.6821217,31.2514756 L14.8342857,38.2503196 Z M14.6868072,24.1777914 L0.994285714,24.1777914 L7.84002141,17.1789474 L14.6868072,24.1777914 Z M14.8342857,24.1777914 L14.8342857,17.1789474 L21.6821217,17.1789474 L21.6821217,24.1777914 L14.8342857,24.1777914 Z" transform="translate(15.720531, 47.962580) rotate(180.000000) translate(-15.720531, -47.962580)"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="rooms-right">
+                <a href="pages/rooms/suite.html"><img src="assets/Suite/DSC08732.jpg" alt="Suite Room" class="rooms-image" loading="lazy"></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dinner Section -->
+    <section class="dinner-section">
+        <div class="dinner-container">
+            <div class="dinner-text-wrapper">
+                <div class="dinner-overline">OUR RESTAURANT</div>
+                <h2 class="dinner-title">DINING AT CENTRUM</h2>
+                <div class="dinner-description">
+                    <p>Enjoy a curated dining experience at Hotel Centrum Prizren, where traditional Kosovar flavours meet modern cuisine.</p>
+                    <p>Prepared with locally sourced ingredients, every dish reflects the rich culinary heritage of Prizren.</p>
+                </div>
+                <div class="dinner-button-wrapper">
+                    <a class="o-button o-button--borders" href="pages/restaurant-menu.html">
+                        <span class="o-button__text">VIEW MENU</span>
+
+                        <svg class="o-button__border o-button__border--top" width="36px" height="17px" viewBox="0 0 36 17" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g transform="translate(-68.000000, 0.000000)" class="o-button__border-g" stroke-width="0.5">
+                                    <path d="M82.8982358,16.0935809 L69.2057143,16.0935809 L76.05145,9.09473684 L82.8982358,16.0935809 Z M103.658236,16.0935809 L89.9657143,16.0935809 L96.81145,9.09473684 L103.658236,16.0935809 Z M83.0457143,16.0935809 L83.0457143,9.09473684 L89.8925001,9.09473684 L89.8925001,16.0935809 L83.0457143,16.0935809 Z M82.0571429,4.44330601 L86.4039664,1.42108547e-14 L90.7517328,4.44330601 L86.4039664,8.88661203 L82.0571429,4.44330601 Z"></path>
+                                </g>
+                            </g>
+                        </svg>
+
+                        <svg class="o-button__border o-button__border--right" width="31px" height="63px" viewBox="0 0 31 63" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g transform="translate(-143.000000, -16.000000)" class="o-button__border-g" stroke-width="0.5">
+                                    <path d="M143.348571,71.7473684 L157.041093,71.7473684 L150.195357,78.7462125 L143.348571,71.7473684 Z M157.188571,71.5976881 L157.188571,57.6 L164.036407,64.598844 L157.188571,71.5976881 Z M157.188571,78.7462125 L157.188571,71.7473684 L164.036407,71.7473684 L164.036407,78.7462125 L157.188571,78.7462125 Z M157.188571,51.4620019 L157.188571,44.4631579 L164.036407,44.4631579 L164.036407,51.4620019 L157.188571,51.4620019 Z M168.455288,43.4526316 L172.801061,47.8959924 L168.455288,52.340317 L164.108571,47.8959924 L168.455288,43.4526316 Z M157.188571,38.2503196 L157.188571,24.2526316 L164.036407,31.2514756 L157.188571,38.2503196 Z M157.041093,24.1777914 L143.348571,24.1777914 L150.194307,17.1789474 L157.041093,24.1777914 Z M157.188571,24.1777914 L157.188571,17.1789474 L164.036407,17.1789474 L164.036407,24.1777914 L157.188571,24.1777914 Z"></path>
+                                </g>
+                            </g>
+                        </svg>
+
+                        <svg class="o-button__border o-button__border--bottom" width="36px" height="17px" viewBox="0 0 36 17" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g transform="translate(-68.000000, -79.000000)" class="o-button__border-g" stroke-width="0.5">
+                                    <path d="M82.8982358,95.9251598 L69.2057143,95.9251598 L76.05145,88.9263158 L82.8982358,95.9251598 Z M103.658236,95.9251598 L89.9657143,95.9251598 L96.81145,88.9263158 L103.658236,95.9251598 Z M83.0457143,95.9251598 L83.0457143,88.9263158 L89.8925001,88.9263158 L89.8925001,95.9251598 L83.0457143,95.9251598 Z M82.0571429,84.274885 L86.4039664,79.8315789 L90.7517328,84.274885 L86.4039664,88.718191 L82.0571429,84.274885 Z" transform="translate(86.431975, 87.878369) rotate(180.000000) translate(-86.431975, -87.878369)"></path>
+                                </g>
+                            </g>
+                        </svg>
+
+                        <svg class="o-button__border o-button__border--left" width="31px" height="63px" viewBox="0 0 31 63" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g transform="translate(0.000000, -16.000000)" class="o-button__border-g" stroke-width="0.5">
+                                    <path d="M0.994285714,71.7473684 L14.6868072,71.7473684 L7.84107153,78.7462125 L0.994285714,71.7473684 Z M14.8342857,71.5976881 L14.8342857,57.6 L21.6821217,64.598844 L14.8342857,71.5976881 Z M14.8342857,78.7462125 L14.8342857,71.7473684 L21.6821217,71.7473684 L21.6821217,78.7462125 L14.8342857,78.7462125 Z M14.8342857,51.4620019 L14.8342857,44.4631579 L21.6821217,44.4631579 L21.6821217,51.4620019 L14.8342857,51.4620019 Z M26.101002,43.4526316 L30.4467754,47.8959924 L26.101002,52.340317 L21.7542857,47.8959924 L26.101002,43.4526316 Z M14.8342857,38.2503196 L14.8342857,24.2526316 L21.6821217,31.2514756 L14.8342857,38.2503196 Z M14.6868072,24.1777914 L0.994285714,24.1777914 L7.84002141,17.1789474 L14.6868072,24.1777914 Z M14.8342857,24.1777914 L14.8342857,17.1789474 L21.6821217,17.1789474 L21.6821217,24.1777914 L14.8342857,24.1777914 Z" transform="translate(15.720531, 47.962580) rotate(180.000000) translate(-15.720531, -47.962580)"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dinner Image Section -->
+    <section class="dinner-image-section">
+        <div class="dinner-image-container">
+            <img src="assets/64601059.jpg" alt="Hotel Centrum Restaurant" class="dinner-image" loading="lazy">
+        </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section class="booking-section" id="booking">
+        <div class="booking-container">
+            <div class="booking-header">
+                <div class="booking-overline">MAKE A RESERVATION</div>
+                <h2 class="booking-title">BOOK YOUR STAY</h2>
+                <p class="booking-description">Complete the form below and we'll get back to you shortly to confirm your reservation.</p>
+            </div>
+            <form class="booking-form" id="bookingForm" action="https://formsubmit.co/hotelcentrumprizren@gmail.com" method="POST" target="hidden_iframe">
+                <input type="hidden" name="_subject" value="New Booking Request - Hotel Centrum Prizren">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="room-type" class="form-label">Room Type</label>
+                        <select id="room-type" name="room-type" class="form-select" required>
+                            <option value="">Select a room</option>
+                            <option value="suite">Suite</option>
+                            <option value="double-room">Double Room</option>
+                            <option value="double-jacuzzi">Double Room with Jacuzzi</option>
+                            <option value="family-room">Family Room</option>
+                            <option value="triple-room">Triple Room</option>
+                            <option value="twin-room">Twin Room</option>
+                            <option value="quadruple-room">Quadruple Room</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="guests" class="form-label">Number of Guests</label>
+                        <select id="guests" name="guests" class="form-select" required>
+                            <option value="">Select guests</option>
+                            <option value="1">1 Guest</option>
+                            <option value="2">2 Guests</option>
+                            <option value="3">3 Guests</option>
+                            <option value="4">4 Guests</option>
+                            <option value="5">5+ Guests</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="check-in" class="form-label">Check-in Date</label>
+                        <input type="text" id="check-in" name="check-in" class="form-input" placeholder="Select check-in date" readonly required>
+                    </div>
+                    <div class="form-group">
+                        <label for="check-out" class="form-label">Check-out Date</label>
+                        <input type="text" id="check-out" name="check-out" class="form-input" placeholder="Select check-out date" readonly required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="first-name" class="form-label">First Name</label>
+                        <input type="text" id="first-name" name="first-name" class="form-input" placeholder="Enter your first name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name" class="form-label">Last Name</label>
+                        <input type="text" id="last-name" name="last-name" class="form-input" placeholder="Enter your last name" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" class="form-input" placeholder="+123 456 7890" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group form-group-full">
+                        <label for="message" class="form-label">Special Requests (Optional)</label>
+                        <textarea id="message" name="message" class="form-textarea" rows="4" placeholder="Any special requests or preferences..."></textarea>
+                    </div>
+                </div>
+                <div class="form-submit">
+                    <button type="submit" class="o-button o-button--borders">
+                        <span class="o-button__text">Submit Request</span>
+
+                        <svg class="o-button__border o-button__border--top" width="36px" height="17px" viewBox="0 0 36 17" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g transform="translate(-68.000000, 0.000000)" class="o-button__border-g" stroke-width="0.5">
+                                    <path d="M82.8982358,16.0935809 L69.2057143,16.0935809 L76.05145,9.09473684 L82.8982358,16.0935809 Z M103.658236,16.0935809 L89.9657143,16.0935809 L96.81145,9.09473684 L103.658236,16.0935809 Z M83.0457143,16.0935809 L83.0457143,9.09473684 L89.8925001,9.09473684 L89.8925001,16.0935809 L83.0457143,16.0935809 Z M82.0571429,4.44330601 L86.4039664,1.42108547e-14 L90.7517328,4.44330601 L86.4039664,8.88661203 L82.0571429,4.44330601 Z"></path>
+                                </g>
+                            </g>
+                        </svg>
+
+                        <svg class="o-button__border o-button__border--right" width="31px" height="63px" viewBox="0 0 31 63" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g transform="translate(-143.000000, -16.000000)" class="o-button__border-g" stroke-width="0.5">
+                                    <path d="M143.348571,71.7473684 L157.041093,71.7473684 L150.195357,78.7462125 L143.348571,71.7473684 Z M157.188571,71.5976881 L157.188571,57.6 L164.036407,64.598844 L157.188571,71.5976881 Z M157.188571,78.7462125 L157.188571,71.7473684 L164.036407,71.7473684 L164.036407,78.7462125 L157.188571,78.7462125 Z M157.188571,51.4620019 L157.188571,44.4631579 L164.036407,44.4631579 L164.036407,51.4620019 L157.188571,51.4620019 Z M168.455288,43.4526316 L172.801061,47.8959924 L168.455288,52.340317 L164.108571,47.8959924 L168.455288,43.4526316 Z M157.188571,38.2503196 L157.188571,24.2526316 L164.036407,31.2514756 L157.188571,38.2503196 Z M157.041093,24.1777914 L143.348571,24.1777914 L150.194307,17.1789474 L157.041093,24.1777914 Z M157.188571,24.1777914 L157.188571,17.1789474 L164.036407,17.1789474 L164.036407,24.1777914 L157.188571,24.1777914 Z"></path>
+                                </g>
+                            </g>
+                        </svg>
+
+                        <svg class="o-button__border o-button__border--bottom" width="36px" height="17px" viewBox="0 0 36 17" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g transform="translate(-68.000000, -79.000000)" class="o-button__border-g" stroke-width="0.5">
+                                    <path d="M82.8982358,95.9251598 L69.2057143,95.9251598 L76.05145,88.9263158 L82.8982358,95.9251598 Z M103.658236,95.9251598 L89.9657143,95.9251598 L96.81145,88.9263158 L103.658236,95.9251598 Z M83.0457143,95.9251598 L83.0457143,88.9263158 L89.8925001,88.9263158 L89.8925001,95.9251598 L83.0457143,95.9251598 Z M82.0571429,84.274885 L86.4039664,79.8315789 L90.7517328,84.274885 L86.4039664,88.718191 L82.0571429,84.274885 Z" transform="translate(86.431975, 87.878369) rotate(180.000000) translate(-86.431975, -87.878369)"></path>
+                                </g>
+                            </g>
+                        </svg>
+
+                        <svg class="o-button__border o-button__border--left" width="31px" height="63px" viewBox="0 0 31 63" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g transform="translate(0.000000, -16.000000)" class="o-button__border-g" stroke-width="0.5">
+                                    <path d="M0.994285714,71.7473684 L14.6868072,71.7473684 L7.84107153,78.7462125 L0.994285714,71.7473684 Z M14.8342857,71.5976881 L14.8342857,57.6 L21.6821217,64.598844 L14.8342857,71.5976881 Z M14.8342857,78.7462125 L14.8342857,71.7473684 L21.6821217,71.7473684 L21.6821217,78.7462125 L14.8342857,78.7462125 Z M14.8342857,51.4620019 L14.8342857,44.4631579 L21.6821217,44.4631579 L21.6821217,51.4620019 L14.8342857,51.4620019 Z M26.101002,43.4526316 L30.4467754,47.8959924 L26.101002,52.340317 L21.7542857,47.8959924 L26.101002,43.4526316 Z M14.8342857,38.2503196 L14.8342857,24.2526316 L21.6821217,31.2514756 L14.8342857,38.2503196 Z M14.6868072,24.1777914 L0.994285714,24.1777914 L7.84002141,17.1789474 L14.6868072,24.1777914 Z M14.8342857,24.1777914 L14.8342857,17.1789474 L21.6821217,17.1789474 L21.6821217,24.1777914 L14.8342857,24.1777914 Z" transform="translate(15.720531, 47.962580) rotate(180.000000) translate(-15.720531, -47.962580)"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Menu Overlay -->
+    <div class="menu-overlay" id="menuOverlay">
+        <button class="menu-close" id="menuClose">×</button>
+        <div class="menu-content">
+            <ul class="menu-items">
+                <li><a href="index.html" class="menu-item" data-img="assets/DSC09338.jpg">Hotel</a></li>
+                <li><a href="pages/our-rooms.html" class="menu-item" data-img="assets/Suite/DSC08732.jpg">Our Rooms</a></li>
+                <li><a href="pages/restaurant-menu.html" class="menu-item" data-img="assets/22.png">Dinning</a></li>
+                <li><a href="#" class="menu-item" data-img="assets/utopia1.png">Utopia</a></li>
+                <li><a href="pages/events.html" class="menu-item" data-img="assets/4.png">Events</a></li>
+                <li><a href="pages/experiences.html" class="menu-item" data-img="assets/4.Albanian.jpg">Experiences</a></li>
+                <li><a href="pages/contact.html" class="menu-item" data-img="assets/6.png">Contact</a></li>
+            </ul>
+
+            <div class="menu-image">
+                <img
+                    src="assets/Suite/DSC08732.jpg"
+                    sizes="(max-width: 1024px) 0px, 560px"
+                    alt="Hotel Centrum Prizren">
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="successToast" class="toast">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="10" stroke="#955013" stroke-width="2"/>
+            <path d="M8 12L11 15L16 9" stroke="#955013" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="toast-content">
+            <div class="toast-title">Request Received!</div>
+            <div class="toast-message">Thank you for your booking request. We will get back to you soon.</div>
+        </div>
+    </div>
+
+    <!-- Hidden iframe for form submission -->
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-wrapper">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3>CONTACT</h3>
+                    <p>Hotel Centrum Prizren<br>
+                    Shadervan Street<br>
+                    Prizren, Kosovo<br><br>
+                    <a href="tel:+38329250100">+383 29 250 100</a><br>
+                    <a href="mailto:info@hotelcentrumprizren.com">info@hotelcentrumprizren.com</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>HOURS</h3>
+                    <p>Reception: 24/7<br>
+                    Breakfast: 7:00 - 10:30 AM<br>
+                    Restaurant: 12:00 - 11:00 PM<br>
+                    Bar: 10:00 AM - 12:00 AM</p>
+                </div>
+                <div class="footer-section">
+                    <h3>EXPLORE</h3>
+                    <p><a href="index.html">Home</a><br>
+                    <a href="pages/our-rooms.html">Our Rooms</a><br>
+                    <a href="pages/restaurant-menu.html">Restaurant</a><br>
+                    <a href="#booking">Booking</a></p>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-container footer-container--copyright">
+                <div class="footer-copyright">
+                    <span>&copy; 2026 Hotel Centrum Prizren. All rights reserved.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container" id="chatbot">
+        <button class="chatbot-toggle" id="chatbotToggle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 15C21 15.5304 20.7893 16.0391 20.4142 16.4142C20.0391 16.7893 19.5304 17 19 17H7L3 21V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V15Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <div class="chatbot-header-title">
+                    <h3>Prizren Guide</h3>
+                    <p>Ask about Prizren's history & tourism</p>
+                </div>
+                <button class="chatbot-close" id="chatbotClose">×</button>
+            </div>
+            
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="chatbot-message bot-message">
+                    <div class="message-content">
+                        Welcome! Ask me anything about Prizren's rich history and tourist attractions. Choose a topic or type your question.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chatbot-suggestions" id="chatbotSuggestions">
+                <button class="suggestion-btn" data-question="history">History</button>
+                <button class="suggestion-btn" data-question="attractions">Attractions</button>
+                <button class="suggestion-btn" data-question="culture">Culture</button>
+                <button class="suggestion-btn" data-question="food">Food</button>
+            </div>
+            
+            <div class="chatbot-input-wrapper">
+                <input type="text" class="chatbot-input" id="chatbotInput" placeholder="Ask about Prizren...">
+                <button class="chatbot-send" id="chatbotSend">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 2L11 13" stroke="#504a23" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="#504a23" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.3.4/dist/js/datepicker-full.min.js"></script>
+    <script src="chatbot.js"></script>
+    <script src="script.js"></script>
+    
+    <script>
+        // Room image hover switching
+        document.addEventListener('DOMContentLoaded', function() {
+            const roomItems = document.querySelectorAll('.room-item');
+            const roomImage = document.querySelector('.rooms-image');
+            
+            if (!roomImage) return;
+            
+            const roomImages = {
+                'suite.html': 'assets/Suite/DSC08732.jpg',
+                'double-room.html': 'assets/Double Room/DSC08679.jpg',
+                'double-room-jacuzzi.html': 'assets/Double Room with Jacuzzi/DSC08528.jpg',
+                'family-room.html': 'assets/Family Room/DSC08602.jpg',
+                'triple-room.html': 'assets/Triple Room/DSC08575.jpg',
+                'twin-room.html': 'assets/Twin Room/DSC08847.jpg',
+                'quadruple-room.html': 'assets/Quadruple Room/DSC08805.jpg'
+            };
+            
+            roomItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    const href = this.getAttribute('href');
+                    if (roomImages[href]) {
+                        roomImage.src = roomImages[href];
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

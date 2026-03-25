@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Room — Hotel Centrum Prizren</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/19560807c484bbbfcd37de7a0011a829?family=Canela-Light" rel="stylesheet">
+    <link rel="stylesheet" href="../../room-detail.css">
+    <link rel="preload" href="../../assets/Family Room/DSC08602.jpg" as="image" fetchpriority="high">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header" id="siteHeader">
+        <a href="../../index.html" class="logo">
+            <img src="../../assets/Logo.png" alt="Hotel Centrum Logo" style="height:52px;width:auto;filter:brightness(0) invert(1);">
+        </a>
+        <div class="header-center">
+            <div class="brand-title">HOTEL CENTRUM</div>
+            <div class="brand-title">PRIZREN</div>
+        </div>
+        <button class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Menu Overlay -->
+    <div class="menu-overlay" id="menuOverlay">
+        <button class="menu-close" id="menuClose">&times;</button>
+        <div class="menu-content">
+            <ul class="menu-items">
+                <li><a href="../../index.html" class="menu-item" data-img="../../assets/DSC09338.jpg">Hotel</a></li>
+                <li><a href="../our-rooms.html" class="menu-item" data-img="../../assets/Family Room/DSC08733.jpg">Our Rooms</a></li>
+                <li><a href="../restaurant-menu.html" class="menu-item" data-img="../../assets/22.png">Dinning</a></li>
+                <li><a href="#" class="menu-item" data-img="../../assets/utopia1.png">Utopia</a></li>
+                <li><a href="../events.html" class="menu-item" data-img="../../assets/4.png">Events</a></li>
+                <li><a href="../experiences.html" class="menu-item" data-img="../../assets/4.Albanian.jpg">Experiences</a></li>
+                <li><a href="../contact.html" class="menu-item" data-img="../../assets/6.png">Contact</a></li>
+            </ul>
+            <div class="menu-image">
+                <img src="../../assets/Family Room/DSC08602.jpg" alt="Hotel Centrum Prizren">
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="room-hero" style="background-image:url('../../assets/Family Room/DSC08602.jpg');">
+        <div class="room-hero-content">
+            <div class="room-hero-overline">Hotel Centrum Prizren</div>
+            <h1 class="room-hero-title">Family Room</h1>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery-section">
+        <div class="gallery-main" id="galleryMain">
+            <img src="../../assets/Family Room/DSC08602.jpg" alt="Family Room 1" class="active" fetchpriority="high">
+            <img src="../../assets/Family Room/DSC08607.jpg" alt="Family Room 2" loading="lazy">
+            <img src="../../assets/Family Room/DSC08617.jpg" alt="Family Room 3" loading="lazy">
+            <img src="../../assets/Family Room/DSC08622.jpg" alt="Family Room 4" loading="lazy">
+            <img src="../../assets/Family Room/DSC08627.jpg" alt="Family Room 5" loading="lazy">
+            <img src="../../assets/Family Room/DSC08630.jpg" alt="Family Room 6" loading="lazy">
+            <img src="../../assets/Family Room/DSC08635.jpg" alt="Family Room 7" loading="lazy">
+            <img src="../../assets/Family Room/DSC08642.jpg" alt="Family Room 8" loading="lazy">
+            <img src="../../assets/Family Room/DSC08649.jpg" alt="Family Room 9" loading="lazy">
+            <img src="../../assets/Family Room/DSC08659.jpg" alt="Family Room 10" loading="lazy">
+            <img src="../../assets/Family Room/DSC08664.jpg" alt="Family Room 11" loading="lazy">
+            <img src="../../assets/Family Room/DSC08667.jpg" alt="Family Room 12" loading="lazy">
+            <img src="../../assets/Family Room/DSC08672.jpg" alt="Family Room 13" loading="lazy">
+            <button class="gallery-btn gallery-btn--prev" id="prevBtn">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+            </button>
+            <button class="gallery-btn gallery-btn--next" id="nextBtn">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </button>
+            <div class="gallery-counter"><span id="currentNum">1</span> / <span id="totalNum">13</span></div>
+        </div>
+        <div class="gallery-thumbs" id="galleryThumbs">
+            <img src="../../assets/Family Room/DSC08602.jpg" alt="Family Room 1" class="active" data-index="0">
+            <img src="../../assets/Family Room/DSC08607.jpg" alt="Family Room 2" data-index="1" loading="lazy">
+            <img src="../../assets/Family Room/DSC08617.jpg" alt="Family Room 3" data-index="2" loading="lazy">
+            <img src="../../assets/Family Room/DSC08622.jpg" alt="Family Room 4" data-index="3" loading="lazy">
+            <img src="../../assets/Family Room/DSC08627.jpg" alt="Family Room 5" data-index="4" loading="lazy">
+            <img src="../../assets/Family Room/DSC08630.jpg" alt="Family Room 6" data-index="5" loading="lazy">
+            <img src="../../assets/Family Room/DSC08635.jpg" alt="Family Room 7" data-index="6" loading="lazy">
+            <img src="../../assets/Family Room/DSC08642.jpg" alt="Family Room 8" data-index="7" loading="lazy">
+            <img src="../../assets/Family Room/DSC08649.jpg" alt="Family Room 9" data-index="8" loading="lazy">
+            <img src="../../assets/Family Room/DSC08659.jpg" alt="Family Room 10" data-index="9" loading="lazy">
+            <img src="../../assets/Family Room/DSC08664.jpg" alt="Family Room 11" data-index="10" loading="lazy">
+            <img src="../../assets/Family Room/DSC08667.jpg" alt="Family Room 12" data-index="11" loading="lazy">
+            <img src="../../assets/Family Room/DSC08672.jpg" alt="Family Room 13" data-index="12" loading="lazy">
+        </div>
+    </section>
+
+    <!-- Details -->
+    <section class="room-details-section">
+        <div class="room-details-inner">
+            <div class="room-details-left">
+                <div class="room-overline">Our Rooms</div>
+                <h2>Family Room</h2>
+                <p class="room-description">Our spacious Family Room is designed to make every member of the family feel at home. With flexible sleeping arrangements — a double bed and two single beds — alongside a generously sized en-suite bathroom and all modern amenities, it offers the perfect base for a family adventure in Prizren.</p>
+                <p class="room-description">With ample space and thoughtful touches throughout, you'll find everything you need to ensure a comfortable and memorable stay in the heart of the city's historic old town.</p>
+                <div class="room-stats">
+                    <div class="stat"><span class="stat-value">32</span><span class="stat-label">m² Size</span></div>
+                    <div class="stat"><span class="stat-value">4</span><span class="stat-label">Guests</span></div>
+                    <div class="stat"><span class="stat-value">3</span><span class="stat-label">Beds</span></div>
+                </div>
+            </div>
+            <div class="room-details-right">
+                <div class="amenities-title">Room Amenities</div>
+                <div class="amenities-grid">
+                    <div class="amenity-item"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Double + 2 single beds</div>
+                    <div class="amenity-item"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> En-suite bathroom</div>
+                    <div class="amenity-item"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Air conditioning</div>
+                    <div class="amenity-item"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Free Wi-Fi</div>
+                    <div class="amenity-item"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Flat-screen TV</div>
+                    <div class="amenity-item"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Minibar</div>
+                    <div class="amenity-item"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Room service</div>
+                    <div class="amenity-item"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> In-room safe</div>
+                    <div class="amenity-item"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Hairdryer</div>
+                    <div class="amenity-item"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Daily housekeeping</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="room-cta-section">
+        <div class="cta-overline">Ready to Book?</div>
+        <h2>Reserve Your Family Room</h2>
+        <div class="cta-buttons">
+            <a href="index.html?room=family-room#booking" class="btn-book">Book Now</a>
+            <a href="index.html" class="btn-back">Back to Hotel</a>
+        </div>
+    </section>
+
+    <!-- Other Rooms -->
+    <section class="other-rooms-section">
+        <h2>Explore Other Rooms</h2>
+        <div class="other-rooms-grid">
+            <a href="./triple-room.html" class="other-room-card">
+                <img src="../../assets/Triple Room/DSC08575.jpg" alt="Triple Room" loading="lazy">
+                <div class="other-room-card-overlay"><span class="other-room-card-name">Triple Room</span></div>
+            </a>
+            <a href="./quadruple-room.html" class="other-room-card">
+                <img src="../../assets/Quadruple Room/DSC08805.jpg" alt="Quadruple Room" loading="lazy">
+                <div class="other-room-card-overlay"><span class="other-room-card-name">Quadruple Room</span></div>
+            </a>
+            <a href="./suite.html" class="other-room-card">
+                <img src="../../assets/Suite/DSC08732.jpg" alt="Suite" loading="lazy">
+                <div class="other-room-card-overlay"><span class="other-room-card-name">Suite</span></div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <span>&copy; 2026 Hotel Centrum Prizren. All rights reserved.</span>
+    </footer>
+
+    <script>
+        const header = document.getElementById('siteHeader');
+        window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 60); });
+
+        const images = document.querySelectorAll('#galleryMain img');
+        const thumbs = document.querySelectorAll('#galleryThumbs img');
+        const currentNum = document.getElementById('currentNum');
+        let current = 0;
+
+        function goTo(index) {
+            images[current].classList.remove('active');
+            thumbs[current].classList.remove('active');
+            current = (index + images.length) % images.length;
+            images[current].classList.add('active');
+            thumbs[current].classList.add('active');
+            currentNum.textContent = current + 1;
+            thumbs[current].scrollIntoView({ behavior: 'smooth', inline: 'nearest', block: 'nearest' });
+        }
+
+        document.getElementById('prevBtn').addEventListener('click', () => goTo(current - 1));
+        document.getElementById('nextBtn').addEventListener('click', () => goTo(current + 1));
+        thumbs.forEach(t => t.addEventListener('click', () => goTo(parseInt(t.dataset.index))));
+        document.addEventListener('keydown', e => {
+            if (document.getElementById('menuOverlay')?.classList.contains('active')) return;
+            if (e.key === 'ArrowLeft') goTo(current - 1);
+            if (e.key === 'ArrowRight') goTo(current + 1);
+        });
+    </script>
+    <script src="../../menu.js"></script>
+</body>
+</html>

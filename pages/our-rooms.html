@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Rooms — Hotel Centrum Prizren</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/19560807c484bbbfcd37de7a0011a829?family=Canela-Light" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        /* Amenities Page Specific Styles */
+        .amenities-hero {
+            height: 100vh;
+            background-image: url('../assets/DSC09338.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .amenities-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .amenities-hero-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+        }
+
+        .amenities-hero-overline {
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+
+        .amenities-hero-title {
+            font-family: "Canela-Light", serif;
+            font-size: 72px;
+            font-weight: 400;
+            margin: 0;
+            letter-spacing: 1px;
+        }
+
+        /* Feature Section */
+        .amenities-features {
+            background: #f7f5ef;
+            padding: 120px 60px;
+            text-align: center;
+        }
+
+        .amenities-features-header {
+            max-width: 900px;
+            margin: 0 auto 80px;
+        }
+
+        .amenities-overline {
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #504a23;
+            margin-bottom: 20px;
+        }
+
+        .amenities-features h2 {
+            font-family: "Canela-Light", serif;
+            font-size: 52px;
+            color: #504a23;
+            margin: 0 0 30px 0;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+
+        .amenities-features-text {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #504a23;
+            font-family: "Cormorant Garamond", serif;
+            font-weight: 300;
+        }
+
+        .decorative-divider {
+            width: 40px;
+            height: 2px;
+            background: #504a23;
+            margin: 40px auto;
+            opacity: 0.4;
+        }
+
+        /* Grid Section */
+        .amenities-grid-section {
+            background: #f7f5ef;
+            padding: 80px 60px;
+        }
+
+        .amenities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .amenity-card {
+            text-align: center;
+            padding: 40px 30px;
+            background: white;
+            border: 1px solid #e0dcd5;
+        }
+
+        .amenity-card-icon {
+            width: 60px;
+            height: 60px;
+            background: #504a23;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+        }
+
+        .amenity-card-icon svg {
+            width: 30px;
+            height: 30px;
+            color: white;
+        }
+
+        .amenity-card h3 {
+            font-family: "Canela-Light", serif;
+            font-size: 22px;
+            color: #504a23;
+            margin: 0 0 15px 0;
+            font-weight: 400;
+        }
+
+        .amenity-card p {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #504a23;
+            font-weight: 300;
+        }
+
+        /* Image Section */
+        .amenities-image-section {
+            background: #f7f5ef;
+            padding: 80px 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .amenities-image-container {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .amenities-image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Highlight Section */
+        .amenities-highlight {
+            background: linear-gradient(135deg, #504a23 0%, #3d3815 100%);
+            color: white;
+            padding: 100px 60px;
+            text-align: center;
+        }
+
+        .amenities-highlight h2 {
+            font-family: "Canela-Light", serif;
+            font-size: 48px;
+            margin: 0 0 30px 0;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+
+        .amenities-highlight p {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 16px;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            font-weight: 300;
+            opacity: 0.95;
+        }
+
+        .amenities-highlight-button {
+            display: inline-block;
+            background: white;
+            color: #504a23;
+            padding: 15px 40px;
+            text-decoration: none;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .amenities-highlight-button:hover {
+            background: #f7f5ef;
+            transform: scale(1.05);
+        }
+
+        /* Services Section */
+        .amenities-services {
+            background: #f7f5ef;
+            padding: 120px 60px;
+        }
+
+        .amenities-services-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .amenities-services h2 {
+            font-family: "Canela-Light", serif;
+            font-size: 48px;
+            color: #504a23;
+            text-align: center;
+            margin: 0 0 80px 0;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+
+        .services-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+        }
+
+        .service-item {
+            text-align: center;
+        }
+
+        .service-item h3 {
+            font-family: "Canela-Light", serif;
+            font-size: 20px;
+            color: #504a23;
+            margin: 0 0 12px 0;
+            font-weight: 400;
+        }
+
+        .service-item p {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 14px;
+            color: #504a23;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        /* Footer */
+        .amenities-cta {
+            background: white;
+            padding: 80px 60px;
+            text-align: center;
+            border-top: 1px solid #e0dcd5;
+        }
+
+        .amenities-cta-overline {
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #504a23;
+            margin-bottom: 15px;
+        }
+
+        .amenities-cta h2 {
+            font-family: "Canela-Light", serif;
+            font-size: 42px;
+            color: #504a23;
+            margin: 0 0 40px 0;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+
+        .cta-links {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-link {
+            display: inline-block;
+            padding: 12px 35px;
+            border: 1.5px solid #504a23;
+            color: #504a23;
+            text-decoration: none;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .cta-link:hover {
+            background: #504a23;
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .amenities-hero-title {
+                font-size: 42px;
+            }
+
+            .amenities-features {
+                padding: 80px 30px;
+            }
+
+            .amenities-features h2 {
+                font-size: 36px;
+            }
+
+            .amenities-grid {
+                gap: 30px;
+            }
+
+            .amenity-card {
+                padding: 30px 20px;
+            }
+
+            .amenities-highlight {
+                padding: 60px 30px;
+            }
+
+            .amenities-highlight h2 {
+                font-size: 32px;
+            }
+
+            .amenities-cta {
+                padding: 60px 30px;
+            }
+
+            .amenities-cta h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header" id="siteHeader">
+        <a href="../index.html" class="logo">
+            <img src="../assets/Logo.png" alt="Hotel Centrum Logo" style="height:52px;width:auto;filter:brightness(0) invert(1);">
+        </a>
+        <div class="header-center">
+            <div class="brand-title">HOTEL CENTRUM</div>
+            <div class="brand-title">PRIZREN</div>
+        </div>
+        <button class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Menu Overlay -->
+    <div class="menu-overlay" id="menuOverlay">
+        <button class="menu-close" id="menuClose">&times;</button>
+        <div class="menu-content">
+            <ul class="menu-items">
+                <li><a href="../index.html" class="menu-item" data-img="../assets/DSC09338.jpg">Hotel</a></li>
+                <li><a href="our-rooms.html" class="menu-item" data-img="../assets/Suite/DSC08732.jpg">Our Rooms</a></li>
+                <li><a href="restaurant-menu.html" class="menu-item" data-img="../assets/22.png">Dinning</a></li>
+                <li><a href="#" class="menu-item" data-img="../assets/utopia1.png">Utopia</a></li>
+                <li><a href="events.html" class="menu-item" data-img="../assets/4.png">Events</a></li>
+                <li><a href="experiences.html" class="menu-item" data-img="../assets/4.Albanian.jpg">Experiences</a></li>
+                <li><a href="contact.html" class="menu-item" data-img="../assets/6.png">Contact</a></li>
+            </ul>
+            <div class="menu-image">
+                <img src="../assets/DSC09338.jpg" alt="Hotel Centrum Prizren">
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="amenities-hero">
+        <div class="amenities-hero-content">
+            <div class="amenities-hero-overline">Hotel Centrum Prizren</div>
+            <h1 class="amenities-hero-title">OUR ROOMS</h1>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section class="rooms-section" id="rooms">
+        <div class="rooms-container">
+            <div class="rooms-left">
+                <div class="rooms-overline">OUR ROOMS</div>
+                <h2 class="rooms-title">DISTINCTIVE COMFORT</h2>
+                <div class="rooms-list">
+                    <a href="rooms/suite.html" class="room-item active">Suite</a>
+                    <a href="rooms/double-room.html" class="room-item">Double Room</a>
+                    <a href="rooms/double-room-jacuzzi.html" class="room-item">Double Room with Jacuzzi</a>
+                    <a href="rooms/family-room.html" class="room-item">Family Room</a>
+                    <a href="rooms/triple-room.html" class="room-item">Triple Room</a>
+                    <a href="rooms/twin-room.html" class="room-item">Twin Room</a>
+                    <a href="rooms/quadruple-room.html" class="room-item">Quadruple Room</a>
+                </div>
+                <div class="rooms-button-wrapper">
+                    <a href="../index.html?room=suite#booking" class="o-button o-button--borders">
+                        <span class="o-button__text">Book now</span>
+                        <svg class="o-button__border o-button__border--top" width="36px" height="17px" viewBox="0 0 36 17" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g transform="translate(-68.000000, 0.000000)" class="o-button__border-g" stroke-width="0.5">
+                                    <path d="M82.8982358,16.0935809 L69.2057143,16.0935809 L76.05145,9.09473684 L82.8982358,16.0935809 Z M103.658236,16.0935809 L89.9657143,16.0935809 L96.81145,9.09473684 L103.658236,16.0935809 Z M83.0457143,16.0935809 L83.0457143,9.09473684 L89.8925001,9.09473684 L89.8925001,16.0935809 L83.0457143,16.0935809 Z M82.0571429,4.44330601 L86.4039664,1.42108547e-14 L90.7517328,4.44330601 L86.4039664,8.88661203 L82.0571429,4.44330601 Z"></path>
+                                </g>
+                            </g>
+                        </svg>
+                        <svg class="o-button__border o-button__border--right" width="31px" height="63px" viewBox="0 0 31 63" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g transform="translate(-143.000000, -16.000000)" class="o-button__border-g" stroke-width="0.5">
+                                    <path d="M143.348571,71.7473684 L157.041093,71.7473684 L150.195357,78.7462125 L143.348571,71.7473684 Z M157.188571,71.5976881 L157.188571,57.6 L164.036407,64.598844 L157.188571,71.5976881 Z M157.188571,78.7462125 L157.188571,71.7473684 L164.036407,71.7473684 L164.036407,78.7462125 L157.188571,78.7462125 Z M157.188571,51.4620019 L157.188571,44.4631579 L164.036407,44.4631579 L164.036407,51.4620019 L157.188571,51.4620019 Z M168.455288,43.4526316 L172.801061,47.8959924 L168.455288,52.340317 L164.108571,47.8959924 L168.455288,43.4526316 Z M157.188571,38.2503196 L157.188571,24.2526316 L164.036407,31.2514756 L157.188571,38.2503196 Z M157.041093,24.1777914 L143.348571,24.1777914 L150.194307,17.1789474 L157.041093,24.1777914 Z M157.188571,24.1777914 L157.188571,17.1789474 L164.036407,17.1789474 L164.036407,24.1777914 L157.188571,24.1777914 Z"></path>
+                                </g>
+                            </g>
+                        </svg>
+                        <svg class="o-button__border o-button__border--bottom" width="36px" height="17px" viewBox="0 0 36 17" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g transform="translate(-68.000000, -79.000000)" class="o-button__border-g" stroke-width="0.5">
+                                    <path d="M82.8982358,95.9251598 L69.2057143,95.9251598 L76.05145,88.9263158 L82.8982358,95.9251598 Z M103.658236,95.9251598 L89.9657143,95.9251598 L96.81145,88.9263158 L103.658236,95.9251598 Z M83.0457143,95.9251598 L83.0457143,88.9263158 L89.8925001,88.9263158 L89.8925001,95.9251598 L83.0457143,95.9251598 Z M82.0571429,84.274885 L86.4039664,79.8315789 L90.7517328,84.274885 L86.4039664,88.718191 L82.0571429,84.274885 Z" transform="translate(86.431975, 87.878369) rotate(180.000000) translate(-86.431975, -87.878369)"></path>
+                                </g>
+                            </g>
+                        </svg>
+                        <svg class="o-button__border o-button__border--left" width="31px" height="63px" viewBox="0 0 31 63" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g transform="translate(0.000000, -16.000000)" class="o-button__border-g" stroke-width="0.5">
+                                    <path d="M0.994285714,71.7473684 L14.6868072,71.7473684 L7.84107153,78.7462125 L0.994285714,71.7473684 Z M14.8342857,71.5976881 L14.8342857,57.6 L21.6821217,64.598844 L14.8342857,71.5976881 Z M14.8342857,78.7462125 L14.8342857,71.7473684 L21.6821217,71.7473684 L21.6821217,78.7462125 L14.8342857,78.7462125 Z M14.8342857,51.4620019 L14.8342857,44.4631579 L21.6821217,44.4631579 L21.6821217,51.4620019 L14.8342857,51.4620019 Z M26.101002,43.4526316 L30.4467754,47.8959924 L26.101002,52.340317 L21.7542857,47.8959924 L26.101002,43.4526316 Z M14.8342857,38.2503196 L14.8342857,24.2526316 L21.6821217,31.2514756 L14.8342857,38.2503196 Z M14.6868072,24.1777914 L0.994285714,24.1777914 L7.84002141,17.1789474 L14.6868072,24.1777914 Z M14.8342857,24.1777914 L14.8342857,17.1789474 L21.6821217,17.1789474 L21.6821217,24.1777914 L14.8342857,24.1777914 Z" transform="translate(15.720531, 47.962580) rotate(180.000000) translate(-15.720531, -47.962580)"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="rooms-right">
+                <a href="rooms/suite.html"><img src="../assets/Suite/DSC08732.jpg" alt="Suite Room" class="rooms-image" loading="lazy"></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Section -->
+    <section class="amenities-features">
+        <div class="amenities-features-header">
+            <div class="amenities-overline">LUXURY EXPERIENCE</div>
+            <h2>COMPREHENSIVE ROOM COLLECTION</h2>
+            <div class="decorative-divider"></div>
+            <p class="amenities-features-text">At Hotel Centrum Prizren, we believe every moment of your stay should be exceptional. From personalized concierge services to state-of-the-art facilities, we've thoughtfully curated a collection of amenities designed to enhance your comfort, convenience, and overall experience. Whether you're here for business or leisure, discover the refined elegance that defines our hospitality.</p>
+        </div>
+    </section>
+
+    <!-- Grid Section -->
+    <section class="amenities-grid-section">
+        <div class="amenities-grid">
+            <div class="amenity-card">
+                <div class="amenity-card-icon">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+                </div>
+                <h3>Concierge Service</h3>
+                <p>Expert assistance for restaurant reservations, city tours, and special requests available 24/7 to enhance your stay.</p>
+            </div>
+
+            <div class="amenity-card">
+                <div class="amenity-card-icon">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"/></svg>
+                </div>
+                <h3>Free WiFi</h3>
+                <p>High-speed complimentary internet access throughout the hotel for seamless connectivity during your stay.</p>
+            </div>
+
+            <div class="amenity-card">
+                <div class="amenity-card-icon">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m0 0l8 4m-8-4v10l8 4m0-10l8 4m-8-4v10"/></svg>
+                </div>
+                <h3>Room Service</h3>
+                <p>In-room dining with a selection of delectable dishes prepared by our culinary team, available around the clock.</p>
+            </div>
+
+            <div class="amenity-card">
+                <div class="amenity-card-icon">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14.828 14.828a4 4 0 01-5.656 0M17.657 17.657a8 8 0 01-11.314 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+                <h3>Spa & Wellness</h3>
+                <p>Rejuvenate with our curated spa treatments, massages, and wellness programs designed for ultimate relaxation.</p>
+            </div>
+
+            <div class="amenity-card">
+                <div class="amenity-card-icon">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                </div>
+                <h3>Business Center</h3>
+                <p>Fully equipped workspace with computers, printers, and high-speed internet for your business requirements.</p>
+            </div>
+
+            <div class="amenity-card">
+                <div class="amenity-card-icon">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+                <h3>Housekeeping</h3>
+                <p>Daily professional housekeeping services ensure your room remains immaculate throughout your stay.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Section -->
+    <section class="amenities-image-section">
+        <div class="amenities-image-container">
+            <img src="../assets/DSC09338.jpg" alt="Hotel Amenities" loading="lazy">
+        </div>
+    </section>
+
+    <!-- Highlight Section -->
+    <section class="amenities-highlight">
+        <h2>EXPERIENCE EXCELLENCE</h2>
+        <p>Our commitment to hospitality extends beyond rooms. Every detail, from the fine dining restaurant to our intimate lounge areas, is crafted to provide an unforgettable experience in the heart of historic Prizren.</p>
+        <a href="#rooms" class="amenities-highlight-button">Explore Our Rooms</a>
+    </section>
+
+    <!-- Services Section -->
+    <section class="amenities-services">
+        <div class="amenities-services-inner">
+            <h2>Additional Services</h2>
+            <div class="services-list">
+                <div class="service-item">
+                    <h3>Parking</h3>
+                    <p>Secure parking facilities available for guests' convenience in close proximity to the hotel.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Currency Exchange</h3>
+                    <p>Professional currency exchange services to assist international travelers.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Luggage Storage</h3>
+                    <p>Secure storage facilities for your luggage before check-in or after checkout.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Tours & Activities</h3>
+                    <p>Curated local tours and activities arranged through our concierge team.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Laundry Service</h3>
+                    <p>Professional laundry and dry cleaning services with quick turnaround times.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Translation Services</h3>
+                    <p>Professional translation assistance available upon request for your convenience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="amenities-cta">
+        <div class="amenities-cta-overline">READY TO VISIT?</div>
+        <h2>Reserve Your Stay Today</h2>
+        <div class="cta-links">
+            <a href="index.html?room=suite#booking" class="cta-link">Book Now</a>
+            <a href="index.html" class="cta-link">Back to Hotel</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-wrapper">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3>CONTACT</h3>
+                    <p>Hotel Centrum Prizren<br>
+                    Shadervan Street<br>
+                    Prizren, Kosovo<br><br>
+                    <a href="tel:+38329250100">+383 29 250 100</a><br>
+                    <a href="mailto:info@hotelcentrumprizren.com">info@hotelcentrumprizren.com</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>HOURS</h3>
+                    <p>Reception: 24/7<br>
+                    Breakfast: 7:00 - 10:30 AM<br>
+                    Restaurant: 12:00 - 11:00 PM<br>
+                    Bar: 10:00 AM - 12:00 AM</p>
+                </div>
+                <div class="footer-section">
+                    <h3>EXPLORE</h3>
+                    <p><a href="index.html">Home</a><br>
+                    <a href="our-rooms.html">Our Rooms</a><br>
+                    <a href="restaurant-menu.html">Restaurant</a><br>
+                    <a href="index.html#booking">Booking</a></p>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-container footer-container--copyright">
+                <div class="footer-copyright">
+                    <span>&copy; 2026 Hotel Centrum Prizren. All rights reserved.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const header = document.getElementById('siteHeader');
+        window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 60); });
+        
+        // Room image hover switching
+        document.addEventListener('DOMContentLoaded', function() {
+            const roomItems = document.querySelectorAll('.room-item');
+            const roomImage = document.querySelector('.rooms-image');
+            
+            if (!roomImage) return;
+            
+            const roomImages = {
+                'rooms/suite.html': '../assets/Suite/DSC08732.jpg',
+                'rooms/double-room.html': '../assets/Double Room/DSC08679.jpg',
+                'rooms/double-room-jacuzzi.html': '../assets/Double Room with Jacuzzi/DSC08528.jpg',
+                'rooms/family-room.html': '../assets/Family Room/DSC08602.jpg',
+                'rooms/triple-room.html': '../assets/Triple Room/DSC08575.jpg',
+                'rooms/twin-room.html': '../assets/Twin Room/DSC08847.jpg',
+                'rooms/quadruple-room.html': '../assets/Quadruple Room/DSC08805.jpg'
+            };
+            
+            roomItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    const href = this.getAttribute('href');
+                    if (roomImages[href]) {
+                        roomImage.src = roomImages[href];
+                    }
+                });
+            });
+        });
+    </script>
+    <script src="../menu.js"></script>
+</body>
+</html>

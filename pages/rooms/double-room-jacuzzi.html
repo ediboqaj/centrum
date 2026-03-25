@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Double Room with Jacuzzi — Hotel Centrum Prizren</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/19560807c484bbbfcd37de7a0011a829?family=Canela-Light" rel="stylesheet">
+    <link rel="stylesheet" href="../../room-detail.css">
+    <link rel="preload" href="../../assets/Double Room with Jacuzzi/DSC08528.jpg" as="image" fetchpriority="high">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header" id="siteHeader">
+        <a href="../../index.html" class="logo">
+            <img src="../../assets/Logo.png" alt="Hotel Centrum Logo" style="height:52px;width:auto;filter:brightness(0) invert(1);">
+        </a>
+        <div class="header-center">
+            <div class="brand-title">HOTEL CENTRUM</div>
+            <div class="brand-title">PRIZREN</div>
+        </div>
+        <button class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Menu Overlay -->
+    <div class="menu-overlay" id="menuOverlay">
+        <button class="menu-close" id="menuClose">&times;</button>
+        <div class="menu-content">
+            <ul class="menu-items">
+                <li><a href="../../index.html" class="menu-item" data-img="../../assets/DSC09338.jpg">Hotel</a></li>
+                <li><a href="../our-rooms.html" class="menu-item" data-img="../../assets/Double Room Jacuzzi/DSC08698.jpg">Our Rooms</a></li>
+                <li><a href="../restaurant-menu.html" class="menu-item" data-img="../../assets/22.png">Dinning</a></li>
+                <li><a href="#" class="menu-item" data-img="../../assets/utopia1.png">Utopia</a></li>
+                <li><a href="../events.html" class="menu-item" data-img="../../assets/4.png">Events</a></li>
+                <li><a href="../experiences.html" class="menu-item" data-img="../../assets/4.Albanian.jpg">Experiences</a></li>
+                <li><a href="../contact.html" class="menu-item" data-img="../../assets/6.png">Contact</a></li>
+            </ul>
+            <div class="menu-image">
+                <img src="../../assets/Double Room with Jacuzzi/DSC08528.jpg" alt="Hotel Centrum Prizren">
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="room-hero" style="background-image:url('../../assets/Double Room with Jacuzzi/DSC08528.jpg');">
+        <div class="room-hero-content">
+            <div class="room-hero-overline">Hotel Centrum Prizren</div>
+            <h1 class="room-hero-title">Double Room with Jacuzzi</h1>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery-section">
+        <div class="gallery-main" id="galleryMain">
+            <img src="../../assets/Double Room with Jacuzzi/DSC08528.jpg" alt="Double Room with Jacuzzi 1" class="active" fetchpriority="high">
+            <img src="../../assets/Double Room with Jacuzzi/DSC08534.jpg" alt="Double Room with Jacuzzi 2" loading="lazy">
+            <img src="../../assets/Double Room with Jacuzzi/DSC08536.jpg" alt="Double Room with Jacuzzi 3" loading="lazy">
+            <img src="../../assets/Double Room with Jacuzzi/DSC08548.jpg" alt="Double Room with Jacuzzi 4" loading="lazy">
+            <img src="../../assets/Double Room with Jacuzzi/DSC08558.jpg" alt="Double Room with Jacuzzi 5" loading="lazy">
+            <img src="../../assets/Double Room with Jacuzzi/DSC08570.jpg" alt="Double Room with Jacuzzi 6" loading="lazy">
+            <button class="gallery-btn gallery-btn--prev" id="prevBtn">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+            </button>
+            <button class="gallery-btn gallery-btn--next" id="nextBtn">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </button>
+            <div class="gallery-counter"><span id="currentNum">1</span> / <span id="totalNum">6</span></div>
+        </div>
+        <div class="gallery-thumbs" id="galleryThumbs">
+            <img src="../../assets/Double Room with Jacuzzi/DSC08528.jpg" alt="Double Room with Jacuzzi 1" class="active" data-index="0">
+            <img src="../../assets/Double Room with Jacuzzi/DSC08534.jpg" alt="Double Room with Jacuzzi 2" data-index="1" loading="lazy">
+            <img src="../../assets/Double Room with Jacuzzi/DSC08536.jpg" alt="Double Room with Jacuzzi 3" data-index="2" loading="lazy">
+            <img src="../../assets/Double Room with Jacuzzi/DSC08548.jpg" alt="Double Room with Jacuzzi 4" data-index="3" loading="lazy">
+            <img src="../../assets/Double Room with Jacuzzi/DSC08558.jpg" alt="Double Room with Jacuzzi 5" data-index="4" loading="lazy">
+            <img src="../../assets/Double Room with Jacuzzi/DSC08570.jpg" alt="Double Room with Jacuzzi 6" data-index="5" loading="lazy">
+        </div>
+    </section>
+
+    <!-- Details -->
+    <section class="room-details-section">
+        <div class="room-details-inner">
+            <div class="room-details-left">
+                <div class="room-overline">Our Rooms</div>
+                <h2>Double Room<br>with Jacuzzi</h2>
+                <p class="room-description">Indulge in our Double Room with Jacuzzi — a romantic escape featuring a private in-room jacuzzi, a queen-size bed, and carefully chosen furnishings. Perfectly designed for couples seeking a touch of luxury during their stay in historic Prizren.</p>
+                <p class="room-description">The spacious en-suite bathroom and premium bath amenities make this room the ideal choice for a special occasion, honeymoon, or simply a well-deserved retreat in the heart of the old town.</p>
+                <div class="room-stats">
+                    <div class="stat"><span class="stat-value">26</span><span class="stat-label">m² Size</span></div>
+                    <div class="stat"><span class="stat-value">2</span><span class="stat-label">Guests</span></div>
+                    <div class="stat"><span class="stat-value">1</span><span class="stat-label">Queen Bed</span></div>
+                </div>
+            </div>
+            <div class="room-details-right">
+                <div class="amenities-title">Room Amenities</div>
+                <div class="amenities-grid">
+                    <div class="amenity-item"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Queen-size bed</div>
+                    <div class="amenity-item"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Private Jacuzzi</div>
+                    <div class="amenity-item"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> En-suite bathroom</div>
+                    <div class="amenity-item"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Air conditioning</div>
+                    <div class="amenity-item"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Free Wi-Fi</div>
+                    <div class="amenity-item"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Flat-screen TV</div>
+                    <div class="amenity-item"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Minibar</div>
+                    <div class="amenity-item"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Room service</div>
+                    <div class="amenity-item"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> In-room safe</div>
+                    <div class="amenity-item"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Hairdryer</div>
+                    <div class="amenity-item"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Bathrobe &amp; slippers</div>
+                    <div class="amenity-item"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Premium bath amenities</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="room-cta-section">
+        <div class="cta-overline">Ready to Book?</div>
+        <h2>Reserve Your Jacuzzi Room</h2>
+        <div class="cta-buttons">
+            <a href="index.html?room=double-jacuzzi#booking" class="btn-book">Book Now</a>
+            <a href="index.html" class="btn-back">Back to Hotel</a>
+        </div>
+    </section>
+
+    <!-- Other Rooms -->
+    <section class="other-rooms-section">
+        <h2>Explore Other Rooms</h2>
+        <div class="other-rooms-grid">
+            <a href="./suite.html" class="other-room-card">
+                <img src="../../assets/Suite/DSC08732.jpg" alt="Suite" loading="lazy">
+                <div class="other-room-card-overlay"><span class="other-room-card-name">Suite</span></div>
+            </a>
+            <a href="./double-room.html" class="other-room-card">
+                <img src="../../assets/Double Room/DSC08679.jpg" alt="Double Room" loading="lazy">
+                <div class="other-room-card-overlay"><span class="other-room-card-name">Double Room</span></div>
+            </a>
+            <a href="./family-room.html" class="other-room-card">
+                <img src="../../assets/Family Room/DSC08602.jpg" alt="Family Room" loading="lazy">
+                <div class="other-room-card-overlay"><span class="other-room-card-name">Family Room</span></div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <span>&copy; 2026 Hotel Centrum Prizren. All rights reserved.</span>
+    </footer>
+
+    <script>
+        const header = document.getElementById('siteHeader');
+        window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 60); });
+
+        const images = document.querySelectorAll('#galleryMain img');
+        const thumbs = document.querySelectorAll('#galleryThumbs img');
+        const currentNum = document.getElementById('currentNum');
+        let current = 0;
+
+        function goTo(index) {
+            images[current].classList.remove('active');
+            thumbs[current].classList.remove('active');
+            current = (index + images.length) % images.length;
+            images[current].classList.add('active');
+            thumbs[current].classList.add('active');
+            currentNum.textContent = current + 1;
+            thumbs[current].scrollIntoView({ behavior: 'smooth', inline: 'nearest', block: 'nearest' });
+        }
+
+        document.getElementById('prevBtn').addEventListener('click', () => goTo(current - 1));
+        document.getElementById('nextBtn').addEventListener('click', () => goTo(current + 1));
+        thumbs.forEach(t => t.addEventListener('click', () => goTo(parseInt(t.dataset.index))));
+        document.addEventListener('keydown', e => {
+            if (document.getElementById('menuOverlay')?.classList.contains('active')) return;
+            if (e.key === 'ArrowLeft') goTo(current - 1);
+            if (e.key === 'ArrowRight') goTo(current + 1);
+        });
+    </script>
+    <script src="../../menu.js"></script>
+</body>
+</html>

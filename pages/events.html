@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events — Hotel Centrum Prizren</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/19560807c484bbbfcd37de7a0011a829?family=Canela-Light" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        /* Events Page Specific Styles */
+        .events-hero {
+            height: 100vh;
+            background-image: url('../assets/DSC09338.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .events-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .events-hero-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+        }
+
+        .events-hero-overline {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 14px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #d4af37;
+            margin-bottom: 16px;
+        }
+
+        .events-hero-title {
+            font-family: 'Canela-Light', 'Cormorant Garamond', serif;
+            font-size: clamp(48px, 8vw, 80px);
+            font-weight: 300;
+            color: white;
+            letter-spacing: 0.08em;
+            line-height: 1.2;
+            margin: 0;
+        }
+
+        /* Events Section */
+        .events-intro {
+            background: #f7f5ef;
+            padding: 80px 60px;
+            text-align: center;
+        }
+
+        .events-intro-overline {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 13px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #a08540;
+            margin-bottom: 16px;
+        }
+
+        .events-intro-title {
+            font-family: 'Canela-Light', 'Cormorant Garamond', serif;
+            font-size: clamp(32px, 5vw, 56px);
+            font-weight: 300;
+            color: #504a23;
+            margin-bottom: 24px;
+            letter-spacing: 0.05em;
+        }
+
+        .events-intro-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 16px;
+            color: #504a23;
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 0 auto 32px;
+        }
+
+        .events-intro-button {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 13px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #504a23;
+            border: 2px solid #504a23;
+            background: transparent;
+            padding: 12px 32px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .events-intro-button:hover {
+            background: #504a23;
+            color: white;
+        }
+
+        /* Event Item */
+        .event-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            align-items: center;
+            background: white;
+        }
+
+        .event-item:nth-child(even) {
+            direction: rtl;
+        }
+
+        .event-item:nth-child(even) > * {
+            direction: ltr;
+        }
+
+        .event-content {
+            padding: 80px 60px;
+            background: #504a23;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .event-overline {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 12px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #d4af37;
+            margin-bottom: 12px;
+        }
+
+        .event-title {
+            font-family: 'Canela-Light', 'Cormorant Garamond', serif;
+            font-size: clamp(28px, 4vw, 48px);
+            font-weight: 300;
+            margin-bottom: 20px;
+            letter-spacing: 0.05em;
+        }
+
+        .event-description {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 15px;
+            line-height: 1.9;
+            margin-bottom: 28px;
+            opacity: 0.98;
+        }
+
+        .event-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 28px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .event-feature {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+
+        .event-feature::before {
+            content: '◆';
+            color: #d4af37;
+            font-size: 10px;
+            margin-top: 4px;
+            flex-shrink: 0;
+        }
+
+        .event-view-more {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 12px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #d4af37;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .event-view-more:hover {
+            color: white;
+            padding-left: 8px;
+        }
+
+        .event-image {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .event-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .events-hero {
+                height: 60vh;
+            }
+
+            .events-hero-title {
+                font-size: 36px;
+            }
+
+            .events-intro {
+                padding: 40px 24px;
+            }
+
+            .event-item {
+                grid-template-columns: 1fr;
+            }
+
+            .event-item:nth-child(even) {
+                direction: ltr;
+            }
+
+            .event-content {
+                padding: 40px 24px;
+                order: 2;
+            }
+
+            .event-image {
+                order: 1;
+                min-height: 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .events-hero {
+                height: 50vh;
+            }
+
+            .events-hero-title {
+                font-size: 24px;
+            }
+
+            .events-intro {
+                padding: 30px 16px;
+            }
+
+            .events-intro-title {
+                font-size: 24px;
+            }
+
+            .events-intro-text {
+                font-size: 14px;
+            }
+
+            .event-content {
+                padding: 30px 16px;
+            }
+
+            .event-title {
+                font-size: 20px;
+            }
+
+            .event-description {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="siteHeader">
+        <a href="../index.html" class="logo">
+            <img src="../assets/Logo.png" alt="Hotel Centrum Logo" style="height:52px;width:auto;filter:brightness(0) invert(1);">
+        </a>
+        <div class="header-center">
+            <div class="brand-title">HOTEL CENTRUM</div>
+            <div class="brand-title">PRIZREN</div>
+        </div>
+        <button class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Menu Overlay -->
+    <div class="menu-overlay" id="menuOverlay">
+        <button class="menu-close" id="menuClose">&times;</button>
+        <div class="menu-content">
+            <ul class="menu-items">
+                <li><a href="../index.html" class="menu-item" data-img="../assets/DSC09338.jpg">Hotel</a></li>
+                <li><a href="our-rooms.html" class="menu-item" data-img="../assets/Suite/DSC08732.jpg">Our Rooms</a></li>
+                <li><a href="restaurant-menu.html" class="menu-item" data-img="../assets/22.png">Dinning</a></li>
+                <li><a href="events.html" class="menu-item" data-img="../assets/4.png">Events</a></li>
+                <li><a href="#" class="menu-item" data-img="../assets/utopia1.png">Utopia</a></li>
+                <li><a href="experiences.html" class="menu-item" data-img="../assets/4.Albanian.jpg">Experiences</a></li>
+                <li><a href="contact.html" class="menu-item" data-img="../assets/6.png">Contact</a></li>
+            </ul>
+            <div class="menu-image">
+                <img src="../assets/DSC09338.jpg" alt="Hotel Centrum Prizren">
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="events-hero">
+        <div class="events-hero-content">
+            <div class="events-hero-overline">Hotel Centrum Prizren</div>
+            <h1 class="events-hero-title">A PLACE FOR YOUR EVENTS</h1>
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="events-intro">
+        <div class="events-intro-overline">PERFECT FOR CELEBRATIONS</div>
+        <h2 class="events-intro-title">Create Unforgettable Moments</h2>
+        <p class="events-intro-text">Whether you're planning a corporate conference, team-building retreat, intimate wedding, or special celebration, Hotel Centrum Prizren offers the perfect setting with elegant spaces, professional service, and personalized attention to every detail.</p>
+        <a href="../index.html#booking" class="events-intro-button">Make an Inquiry</a>
+    </section>
+
+    <!-- Events Items -->
+    <div class="events-container">
+        <!-- Conferences -->
+        <section class="event-item">
+            <div class="event-content">
+                <div class="event-overline">PROFESSIONAL EVENTS</div>
+                <h3 class="event-title">Conferences & Seminars</h3>
+                <p class="event-description">Elevate your professional gatherings with our state-of-the-art conference facilities. Accommodating groups from 50 to 500+ attendees, we provide cutting-edge audio-visual technology, high-speed internet, and flexible layouts designed to facilitate collaboration and knowledge exchange.</p>
+                <div class="event-features">
+                    <div class="event-feature">Dedicated conference coordinator</div>
+                    <div class="event-feature">Breakout session rooms</div>
+                    <div class="event-feature">Premium catering options</div>
+                    <div class="event-feature">Simultaneous translation available</div>
+                </div>
+                <a href="../index.html#booking" class="event-view-more">Inquire Now →</a>
+            </div>
+            <div class="event-image">
+                <img src="../assets/DSC09338.jpg" alt="Conferences">
+            </div>
+        </section>
+
+        <!-- Team Building -->
+        <section class="event-item">
+            <div class="event-content">
+                <div class="event-overline">GROUP ACTIVITIES</div>
+                <h3 class="event-title">Team Building & Retreats</h3>
+                <p class="event-description">Strengthen organizational bonds with expertly designed team-building experiences. From strategic workshops to outdoor adventures in beautiful Prizren, our programs combine professional facilitation with memorable experiences that enhance team cohesion and workplace culture.</p>
+                <div class="event-features">
+                    <div class="event-feature">Customized program design</div>
+                    <div class="event-feature">Professional facilitators</div>
+                    <div class="event-feature">Outdoor activity coordination</div>
+                    <div class="event-feature">Team dining experiences</div>
+                </div>
+                <a href="../index.html#booking" class="event-view-more">Inquire Now →</a>
+            </div>
+            <div class="event-image">
+                <img src="../assets/DSC09338.jpg" alt="Team Building">
+            </div>
+        </section>
+
+        <!-- Weddings -->
+        <section class="event-item">
+            <div class="event-content">
+                <div class="event-overline">SPECIAL CELEBRATIONS</div>
+                <h3 class="event-title">Weddings & Milestone Events</h3>
+                <p class="event-description">Transform your dream celebration into reality. Our elegant ballrooms and intimate venues, combined with award-winning culinary expertise and personalized service, create the perfect setting for weddings, anniversaries, and memorable life events that reflect your unique vision.</p>
+                <div class="event-features">
+                    <div class="event-feature">Custom menu creation</div>
+                    <div class="event-feature">Complimentary couple suite</div>
+                    <div class="event-feature">Professional coordination</div>
+                    <div class="event-feature">Guest accommodation packages</div>
+                </div>
+                <a href="../index.html#booking" class="event-view-more">Inquire Now →</a>
+            </div>
+            <div class="event-image">
+                <img src="../assets/DSC09338.jpg" alt="Weddings">
+            </div>
+        </section>
+
+        <!-- Private Events -->
+        <section class="event-item">
+            <div class="event-content">
+                <div class="event-overline">EXCLUSIVE EXPERIENCES</div>
+                <h3 class="event-title">Private Dinners & Galas</h3>
+                <p class="event-description">Curate an exclusive experience tailored to your vision. Our private event services encompass every detail from bespoke menu development to sophisticated décor, ensuring your gathering reflects your refined taste and exceeds the highest expectations.</p>
+                <div class="event-features">
+                    <div class="event-feature">Exclusive venue access</div>
+                    <div class="event-feature">Chef's special menus</div>
+                    <div class="event-feature">Sommelier wine pairings</div>
+                    <div class="event-feature">Luxury guest experiences</div>
+                </div>
+                <a href="../index.html#booking" class="event-view-more">Inquire Now →</a>
+            </div>
+            <div class="event-image">
+                <img src="../assets/DSC09338.jpg" alt="Private Events">
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-wrapper">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3>CONTACT</h3>
+                    <p>Hotel Centrum Prizren<br>
+                    Shadervan Street<br>
+                    Prizren, Kosovo<br><br>
+                    <a href="tel:+38329250100">+383 29 250 100</a><br>
+                    <a href="mailto:info@hotelcentrumprizren.com">info@hotelcentrumprizren.com</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>HOURS</h3>
+                    <p>Reception: 24/7<br>
+                    Breakfast: 7:00 - 10:30 AM<br>
+                    Restaurant: 12:00 - 11:00 PM<br>
+                    Bar: 10:00 AM - 12:00 AM</p>
+                </div>
+                <div class="footer-section">
+                    <h3>EXPLORE</h3>
+                    <p><a href="../index.html">Home</a><br>
+                    <a href="our-rooms.html">Our Rooms</a><br>
+                    <a href="restaurant-menu.html">Restaurant</a><br>
+                    <a href="../index.html#booking">Booking</a></p>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-container footer-container--copyright">
+                <div class="footer-copyright">
+                    <span>&copy; 2026 Hotel Centrum Prizren. All rights reserved.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../menu.js"></script>
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (header) {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
