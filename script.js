@@ -202,18 +202,17 @@ document.addEventListener('DOMContentLoaded', function() {
         // Desktop: hover to change image
         roomItems.forEach((item, index) => {
             const handleRoomImageChange = () => {
-                if (window.innerWidth > 768) {
-                    stopRoomAutoChange();
-                    currentRoomIndex = index;
-                    updateRoomImage(index);
-                    // Update active state
-                    roomItems.forEach(ri => ri.classList.remove('active'));
-                    item.classList.add('active');
-                }
+                stopRoomAutoChange();
+                currentRoomIndex = index;
+                updateRoomImage(index);
+                // Update active state
+                roomItems.forEach(ri => ri.classList.remove('active'));
+                item.classList.add('active');
             };
 
             item.addEventListener('mouseenter', handleRoomImageChange);
             item.addEventListener('focus', handleRoomImageChange);
+            item.addEventListener('click', handleRoomImageChange);
             item.addEventListener('touchstart', handleRoomImageChange, { passive: true });
         });
 

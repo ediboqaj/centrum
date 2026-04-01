@@ -4,16 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events — Hotel Centrum Prizren</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/Logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
     <link href="https://db.onlinewebfonts.com/c/19560807c484bbbfcd37de7a0011a829?family=Canela-Light" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../footer-new.css">
     <style>
         /* Events Page Specific Styles */
         .events-hero {
             height: 100vh;
-            background-image: url('../assets/DSC09338.jpg');
+            background-image: url('../assets/DSC00035.jpg');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -70,7 +74,7 @@
             font-size: 13px;
             letter-spacing: 0.15em;
             text-transform: uppercase;
-            color: #a08540;
+            color: #857344;
             margin-bottom: 16px;
         }
 
@@ -78,7 +82,7 @@
             font-family: 'Canela-Light', 'Cormorant Garamond', serif;
             font-size: clamp(32px, 5vw, 56px);
             font-weight: 300;
-            color: #504a23;
+            color: #857344;
             margin-bottom: 24px;
             letter-spacing: 0.05em;
         }
@@ -92,24 +96,59 @@
             margin: 0 auto 32px;
         }
 
-        .events-intro-button {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 13px;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: #504a23;
-            border: 2px solid #504a23;
-            background: transparent;
-            padding: 12px 32px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
+        .events-intro-button,
+        .event-view-more {
+            /* Removed custom button styles to allow o-button styles from styles.css */
         }
 
-        .events-intro-button:hover {
+        .event-view-more .o-button__text {
+            color: white !important;
+            position: relative;
+            z-index: 10;
             background: #504a23;
-            color: white;
+            padding: 0 20px;
+        }
+
+        .event-view-more:hover .o-button__text {
+            background: #504a23;
+            opacity: 0.8;
+        }
+
+        .event-view-more .o-button__text::before,
+        .event-view-more .o-button__text::after,
+        .event-view-more::before,
+        .event-view-more::after {
+            content: none !important;
+            display: none !important;
+        }
+
+        .event-view-more .o-button__border {
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .event-view-more .o-button__border-g {
+            stroke: white !important;
+        }
+
+        .event-view-more:hover .o-button__border-g {
+            stroke: white !important;
+            opacity: 0.8;
+        }
+
+        .event-view-more {
+            overflow: visible;
+            background: #504a23;
+            padding: 32px 60px;
+        }
+
+        .events-intro-button:hover .o-button__text,
+        .event-view-more:hover .o-button__text {
+            /* Removed opacity change that was causing visibility issues */
+        }
+
+        .events-intro-button:hover .o-button__border-g {
+            opacity: 0.7;
         }
 
         /* Event Item */
@@ -117,8 +156,11 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 0;
-            align-items: center;
+            align-items: stretch;
             background: white;
+            width: 100%;
+            min-height: 70vh;
+            margin-bottom: 0;
         }
 
         .event-item:nth-child(even) {
@@ -130,37 +172,42 @@
         }
 
         .event-content {
-            padding: 80px 60px;
+            padding: 100px 80px;
             background: #504a23;
             color: white;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            align-items: flex-start;
         }
 
         .event-overline {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 12px;
-            letter-spacing: 0.15em;
+            font-size: 13px;
+            letter-spacing: 0.2em;
             text-transform: uppercase;
-            color: #d4af37;
-            margin-bottom: 12px;
+            color: #857344;
+            margin-bottom: 20px;
+            font-weight: 400;
         }
 
         .event-title {
             font-family: 'Canela-Light', 'Cormorant Garamond', serif;
-            font-size: clamp(28px, 4vw, 48px);
+            font-size: clamp(36px, 6vw, 56px);
             font-weight: 300;
-            margin-bottom: 20px;
-            letter-spacing: 0.05em;
+            margin-bottom: 30px;
+            letter-spacing: 0.08em;
+            line-height: 1.2;
+            text-transform: uppercase;
         }
 
         .event-description {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 15px;
-            line-height: 1.9;
-            margin-bottom: 28px;
-            opacity: 0.98;
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            max-width: 90%;
         }
 
         .event-features {
@@ -189,25 +236,39 @@
 
         .event-view-more {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 12px;
-            letter-spacing: 0.1em;
+            font-size: 14px;
+            letter-spacing: 0.15em;
             text-transform: uppercase;
             color: #d4af37;
             text-decoration: none;
             transition: all 0.3s ease;
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 20px;
+            position: relative;
+            padding: 0 20px;
+        }
+
+        .event-view-more::before,
+        .event-view-more::after {
+            content: '✤';
+            font-size: 16px;
+            opacity: 0.6;
         }
 
         .event-view-more:hover {
             color: white;
-            padding-left: 8px;
+            transform: scale(1.05);
         }
 
         .event-image {
+            width: 100%;
             height: 100%;
             overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
         }
 
         .event-image img {
@@ -215,6 +276,7 @@
             height: 100%;
             object-fit: cover;
             display: block;
+            opacity: 1 !important;
         }
 
         @media (max-width: 768px) {
@@ -232,6 +294,8 @@
 
             .event-item {
                 grid-template-columns: 1fr;
+                min-height: auto;
+                margin-bottom: 0;
             }
 
             .event-item:nth-child(even) {
@@ -239,13 +303,23 @@
             }
 
             .event-content {
-                padding: 40px 24px;
+                padding: 50px 30px;
                 order: 2;
             }
 
             .event-image {
                 order: 1;
                 min-height: 300px;
+                padding: 0;
+            }
+
+            .event-title {
+                font-size: 32px;
+            }
+
+            .event-description {
+                font-size: 15px;
+                max-width: 100%;
             }
         }
 
@@ -308,9 +382,9 @@
             <ul class="menu-items">
                 <li><a href="../index.html" class="menu-item" data-img="../assets/DSC09338.jpg">Hotel</a></li>
                 <li><a href="our-rooms.html" class="menu-item" data-img="../assets/Suite/DSC08732.jpg">Our Rooms</a></li>
-                <li><a href="restaurant-menu.html" class="menu-item" data-img="../assets/22.png">Dinning</a></li>
+                <li><a href="dining.html" class="menu-item" data-img="../assets/22.png">Dinning</a></li>
                 <li><a href="events.html" class="menu-item" data-img="../assets/4.png">Events</a></li>
-                <li><a href="#" class="menu-item" data-img="../assets/utopia1.png">Utopia</a></li>
+                <li><a href="https://utopia-rooftop.com/" class="menu-item" data-img="../assets/utopia1.png" target="_blank">Utopia</a></li>
                 <li><a href="experiences.html" class="menu-item" data-img="../assets/4.Albanian.jpg">Experiences</a></li>
                 <li><a href="contact.html" class="menu-item" data-img="../assets/6.png">Contact</a></li>
             </ul>
@@ -333,7 +407,37 @@
         <div class="events-intro-overline">PERFECT FOR CELEBRATIONS</div>
         <h2 class="events-intro-title">Create Unforgettable Moments</h2>
         <p class="events-intro-text">Whether you're planning a corporate conference, team-building retreat, intimate wedding, or special celebration, Hotel Centrum Prizren offers the perfect setting with elegant spaces, professional service, and personalized attention to every detail.</p>
-        <a href="../index.html#booking" class="events-intro-button">Make an Inquiry</a>
+        <a href="../index.html#booking" class="events-intro-button o-button o-button--borders">
+            <span class="o-button__text">Make an Inquiry</span>
+            <svg class="o-button__border o-button__border--top" width="36px" height="17px" viewBox="0 0 36 17" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g transform="translate(-68.000000, 0.000000)" class="o-button__border-g" stroke-width="0.5">
+                        <path d="M82.8982358,16.0935809 L69.2057143,16.0935809 L76.05145,9.09473684 L82.8982358,16.0935809 Z M103.658236,16.0935809 L89.9657143,16.0935809 L96.81145,9.09473684 L103.658236,16.0935809 Z M83.0457143,16.0935809 L83.0457143,9.09473684 L89.8925001,9.09473684 L89.8925001,16.0935809 L83.0457143,16.0935809 Z M82.0571429,4.44330601 L86.4039664,1.42108547e-14 L90.7517328,4.44330601 L86.4039664,8.88661203 L82.0571429,4.44330601 Z"></path>
+                    </g>
+                </g>
+            </svg>
+            <svg class="o-button__border o-button__border--right" width="31px" height="63px" viewBox="0 0 31 63" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g transform="translate(-143.000000, -16.000000)" class="o-button__border-g" stroke-width="0.5">
+                        <path d="M143.348571,71.7473684 L157.041093,71.7473684 L150.195357,78.7462125 L143.348571,71.7473684 Z M157.188571,71.5976881 L157.188571,57.6 L164.036407,64.598844 L157.188571,71.5976881 Z M157.188571,78.7462125 L157.188571,71.7473684 L164.036407,71.7473684 L164.036407,78.7462125 L157.188571,78.7462125 Z M157.188571,51.4620019 L157.188571,44.4631579 L164.036407,44.4631579 L164.036407,51.4620019 L157.188571,51.4620019 Z M168.455288,43.4526316 L172.801061,47.8959924 L168.455288,52.340317 L164.108571,47.8959924 L168.455288,43.4526316 Z M157.188571,38.2503196 L157.188571,24.2526316 L164.036407,31.2514756 L157.188571,38.2503196 Z M157.041093,24.1777914 L143.348571,24.1777914 L150.194307,17.1789474 L157.041093,24.1777914 Z M157.188571,24.1777914 L157.188571,17.1789474 L164.036407,17.1789474 L164.036407,24.1777914 L157.188571,24.1777914 Z"></path>
+                    </g>
+                </g>
+            </svg>
+            <svg class="o-button__border o-button__border--bottom" width="36px" height="17px" viewBox="0 0 36 17" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g transform="translate(-68.000000, -79.000000)" class="o-button__border-g" stroke-width="0.5">
+                        <path d="M82.8982358,95.9251598 L69.2057143,95.9251598 L76.05145,88.9263158 L82.8982358,95.9251598 Z M103.658236,95.9251598 L89.9657143,95.9251598 L96.81145,88.9263158 L103.658236,95.9251598 Z M83.0457143,95.9251598 L83.0457143,88.9263158 L89.8925001,88.9263158 L89.8925001,95.9251598 L83.0457143,95.9251598 Z M82.0571429,84.274885 L86.4039664,79.8315789 L90.7517328,84.274885 L86.4039664,88.718191 L82.0571429,84.274885 Z" transform="translate(86.431975, 87.878369) rotate(180.000000) translate(-86.431975, -87.878369)"></path>
+                    </g>
+                </g>
+            </svg>
+            <svg class="o-button__border o-button__border--left" width="31px" height="63px" viewBox="0 0 31 63" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g transform="translate(0.000000, -16.000000)" class="o-button__border-g" stroke-width="0.5">
+                        <path d="M0.994285714,71.7473684 L14.6868072,71.7473684 L7.84107153,78.7462125 L0.994285714,71.7473684 Z M14.8342857,71.5976881 L14.8342857,57.6 L21.6821217,64.598844 L14.8342857,71.5976881 Z M14.8342857,78.7462125 L14.8342857,71.7473684 L21.6821217,71.7473684 L21.6821217,78.7462125 L14.8342857,78.7462125 Z M14.8342857,51.4620019 L14.8342857,44.4631579 L21.6821217,44.4631579 L21.6821217,51.4620019 L14.8342857,51.4620019 Z M26.101002,43.4526316 L30.4467754,47.8959924 L26.101002,52.340317 L21.7542857,47.8959924 L26.101002,43.4526316 Z M14.8342857,38.2503196 L14.8342857,24.2526316 L21.6821217,31.2514756 L14.8342857,38.2503196 Z M14.6868072,24.1777914 L0.994285714,24.1777914 L7.84002141,17.1789474 L14.6868072,24.1777914 Z M14.8342857,24.1777914 L14.8342857,17.1789474 L21.6821217,17.1789474 L21.6821217,24.1777914 L14.8342857,24.1777914 Z" transform="translate(15.720531, 47.962580) rotate(180.000000) translate(-15.720531, -47.962580)"></path>
+                    </g>
+                </g>
+            </svg>
+        </a>
     </section>
 
     <!-- Events Items -->
@@ -342,111 +446,217 @@
         <section class="event-item">
             <div class="event-content">
                 <div class="event-overline">PROFESSIONAL EVENTS</div>
-                <h3 class="event-title">Conferences & Seminars</h3>
-                <p class="event-description">Elevate your professional gatherings with our state-of-the-art conference facilities. Accommodating groups from 50 to 500+ attendees, we provide cutting-edge audio-visual technology, high-speed internet, and flexible layouts designed to facilitate collaboration and knowledge exchange.</p>
-                <div class="event-features">
-                    <div class="event-feature">Dedicated conference coordinator</div>
-                    <div class="event-feature">Breakout session rooms</div>
-                    <div class="event-feature">Premium catering options</div>
-                    <div class="event-feature">Simultaneous translation available</div>
-                </div>
-                <a href="../index.html#booking" class="event-view-more">Inquire Now →</a>
+                <h3 class="event-title">Conferences</h3>
+                <p class="event-description">These modular meeting rooms with signature furniture, equipped with the latest technology and offering a personalised culinary experience designed by Le Grand Saint-Michel restaurant is available for groups from 6 to 50 people.</p>
+                <a href="../index.html#booking" class="event-view-more o-button o-button--borders">
+                    <span class="o-button__text">view more</span>
+                    <svg class="o-button__border o-button__border--top" width="36px" height="17px" viewBox="0 0 36 17" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g transform="translate(-68.000000, 0.000000)" class="o-button__border-g" stroke-width="0.5">
+                                <path d="M82.8982358,16.0935809 L69.2057143,16.0935809 L76.05145,9.09473684 L82.8982358,16.0935809 Z M103.658236,16.0935809 L89.9657143,16.0935809 L96.81145,9.09473684 L103.658236,16.0935809 Z M83.0457143,16.0935809 L83.0457143,9.09473684 L89.8925001,9.09473684 L89.8925001,16.0935809 L83.0457143,16.0935809 Z M82.0571429,4.44330601 L86.4039664,1.42108547e-14 L90.7517328,4.44330601 L86.4039664,8.88661203 L82.0571429,4.44330601 Z"></path>
+                            </g>
+                        </g>
+                    </svg>
+                    <svg class="o-button__border o-button__border--right" width="31px" height="63px" viewBox="0 0 31 63" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g transform="translate(-143.000000, -16.000000)" class="o-button__border-g" stroke-width="0.5">
+                                <path d="M143.348571,71.7473684 L157.041093,71.7473684 L150.195357,78.7462125 L143.348571,71.7473684 Z M157.188571,71.5976881 L157.188571,57.6 L164.036407,64.598844 L157.188571,71.5976881 Z M157.188571,78.7462125 L157.188571,71.7473684 L164.036407,71.7473684 L164.036407,78.7462125 L157.188571,78.7462125 Z M157.188571,51.4620019 L157.188571,44.4631579 L164.036407,44.4631579 L164.036407,51.4620019 L157.188571,51.4620019 Z M168.455288,43.4526316 L172.801061,47.8959924 L168.455288,52.340317 L164.108571,47.8959924 L168.455288,43.4526316 Z M157.188571,38.2503196 L157.188571,24.2526316 L164.036407,31.2514756 L157.188571,38.2503196 Z M157.041093,24.1777914 L143.348571,24.1777914 L150.194307,17.1789474 L157.041093,24.1777914 Z M157.188571,24.1777914 L157.188571,17.1789474 L164.036407,17.1789474 L164.036407,24.1777914 L157.188571,24.1777914 Z"></path>
+                            </g>
+                        </g>
+                    </svg>
+                    <svg class="o-button__border o-button__border--bottom" width="36px" height="17px" viewBox="0 0 36 17" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g transform="translate(-68.000000, -79.000000)" class="o-button__border-g" stroke-width="0.5">
+                                <path d="M82.8982358,95.9251598 L69.2057143,95.9251598 L76.05145,88.9263158 L82.8982358,95.9251598 Z M103.658236,95.9251598 L89.9657143,95.9251598 L96.81145,88.9263158 L103.658236,95.9251598 Z M83.0457143,95.9251598 L83.0457143,88.9263158 L89.8925001,88.9263158 L89.8925001,95.9251598 L83.0457143,95.9251598 Z M82.0571429,84.274885 L86.4039664,79.8315789 L90.7517328,84.274885 L86.4039664,88.718191 L82.0571429,84.274885 Z" transform="translate(86.431975, 87.878369) rotate(180.000000) translate(-86.431975, -87.878369)"></path>
+                            </g>
+                        </g>
+                    </svg>
+                    <svg class="o-button__border o-button__border--left" width="31px" height="63px" viewBox="0 0 31 63" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g transform="translate(0.000000, -16.000000)" class="o-button__border-g" stroke-width="0.5">
+                                <path d="M0.994285714,71.7473684 L14.6868072,71.7473684 L7.84107153,78.7462125 L0.994285714,71.7473684 Z M14.8342857,71.5976881 L14.8342857,57.6 L21.6821217,64.598844 L14.8342857,71.5976881 Z M14.8342857,78.7462125 L14.8342857,71.7473684 L21.6821217,71.7473684 L21.6821217,78.7462125 L14.8342857,78.7462125 Z M14.8342857,51.4620019 L14.8342857,44.4631579 L21.6821217,44.4631579 L21.6821217,51.4620019 L14.8342857,51.4620019 Z M26.101002,43.4526316 L30.4467754,47.8959924 L26.101002,52.340317 L21.7542857,47.8959924 L26.101002,43.4526316 Z M14.8342857,38.2503196 L14.8342857,24.2526316 L21.6821217,31.2514756 L14.8342857,38.2503196 Z M14.6868072,24.1777914 L0.994285714,24.1777914 L7.84002141,17.1789474 L14.6868072,24.1777914 Z M14.8342857,24.1777914 L14.8342857,17.1789474 L21.6821217,17.1789474 L21.6821217,24.1777914 L14.8342857,24.1777914 Z" transform="translate(15.720531, 47.962580) rotate(180.000000) translate(-15.720531, -47.962580)"></path>
+                            </g>
+                        </g>
+                    </svg>
+                </a>
             </div>
             <div class="event-image">
-                <img src="../assets/DSC09338.jpg" alt="Conferences">
+                <img src="../assets/DSC00035.jpg" alt="Conferences">
             </div>
         </section>
 
-        <!-- Team Building -->
+        <!-- Activities -->
         <section class="event-item">
             <div class="event-content">
                 <div class="event-overline">GROUP ACTIVITIES</div>
-                <h3 class="event-title">Team Building & Retreats</h3>
-                <p class="event-description">Strengthen organizational bonds with expertly designed team-building experiences. From strategic workshops to outdoor adventures in beautiful Prizren, our programs combine professional facilitation with memorable experiences that enhance team cohesion and workplace culture.</p>
-                <div class="event-features">
-                    <div class="event-feature">Customized program design</div>
-                    <div class="event-feature">Professional facilitators</div>
-                    <div class="event-feature">Outdoor activity coordination</div>
-                    <div class="event-feature">Team dining experiences</div>
-                </div>
-                <a href="../index.html#booking" class="event-view-more">Inquire Now →</a>
+                <h3 class="event-title">Activities and Team-Building</h3>
+                <p class="event-description">Our exceptional location in the heart of the Loire Valley permits groups to enjoy a array of activities in the Chambord domain and in other regions close to Relais de Chambord.</p>
+                <a href="../index.html#booking" class="event-view-more o-button o-button--borders">
+                    <span class="o-button__text">view more</span>
+                    <svg class="o-button__border o-button__border--top" width="36px" height="17px" viewBox="0 0 36 17" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g transform="translate(-68.000000, 0.000000)" class="o-button__border-g" stroke-width="0.5">
+                                <path d="M82.8982358,16.0935809 L69.2057143,16.0935809 L76.05145,9.09473684 L82.8982358,16.0935809 Z M103.658236,16.0935809 L89.9657143,16.0935809 L96.81145,9.09473684 L103.658236,16.0935809 Z M83.0457143,16.0935809 L83.0457143,9.09473684 L89.8925001,9.09473684 L89.8925001,16.0935809 L83.0457143,16.0935809 Z M82.0571429,4.44330601 L86.4039664,1.42108547e-14 L90.7517328,4.44330601 L86.4039664,8.88661203 L82.0571429,4.44330601 Z"></path>
+                            </g>
+                        </g>
+                    </svg>
+                    <svg class="o-button__border o-button__border--right" width="31px" height="63px" viewBox="0 0 31 63" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g transform="translate(-143.000000, -16.000000)" class="o-button__border-g" stroke-width="0.5">
+                                <path d="M143.348571,71.7473684 L157.041093,71.7473684 L150.195357,78.7462125 L143.348571,71.7473684 Z M157.188571,71.5976881 L157.188571,57.6 L164.036407,64.598844 L157.188571,71.5976881 Z M157.188571,78.7462125 L157.188571,71.7473684 L164.036407,71.7473684 L164.036407,78.7462125 L157.188571,78.7462125 Z M157.188571,51.4620019 L157.188571,44.4631579 L164.036407,44.4631579 L164.036407,51.4620019 L157.188571,51.4620019 Z M168.455288,43.4526316 L172.801061,47.8959924 L168.455288,52.340317 L164.108571,47.8959924 L168.455288,43.4526316 Z M157.188571,38.2503196 L157.188571,24.2526316 L164.036407,31.2514756 L157.188571,38.2503196 Z M157.041093,24.1777914 L143.348571,24.1777914 L150.194307,17.1789474 L157.041093,24.1777914 Z M157.188571,24.1777914 L157.188571,17.1789474 L164.036407,17.1789474 L164.036407,24.1777914 L157.188571,24.1777914 Z"></path>
+                            </g>
+                        </g>
+                    </svg>
+                    <svg class="o-button__border o-button__border--bottom" width="36px" height="17px" viewBox="0 0 36 17" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g transform="translate(-68.000000, -79.000000)" class="o-button__border-g" stroke-width="0.5">
+                                <path d="M82.8982358,95.9251598 L69.2057143,95.9251598 L76.05145,88.9263158 L82.8982358,95.9251598 Z M103.658236,95.9251598 L89.9657143,95.9251598 L96.81145,88.9263158 L103.658236,95.9251598 Z M83.0457143,95.9251598 L83.0457143,88.9263158 L89.8925001,88.9263158 L89.8925001,95.9251598 L83.0457143,95.9251598 Z M82.0571429,84.274885 L86.4039664,79.8315789 L90.7517328,84.274885 L86.4039664,88.718191 L82.0571429,84.274885 Z" transform="translate(86.431975, 87.878369) rotate(180.000000) translate(-86.431975, -87.878369)"></path>
+                            </g>
+                        </g>
+                    </svg>
+                    <svg class="o-button__border o-button__border--left" width="31px" height="63px" viewBox="0 0 31 63" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g transform="translate(0.000000, -16.000000)" class="o-button__border-g" stroke-width="0.5">
+                                <path d="M0.994285714,71.7473684 L14.6868072,71.7473684 L7.84107153,78.7462125 L0.994285714,71.7473684 Z M14.8342857,71.5976881 L14.8342857,57.6 L21.6821217,64.598844 L14.8342857,71.5976881 Z M14.8342857,78.7462125 L14.8342857,71.7473684 L21.6821217,71.7473684 L21.6821217,78.7462125 L14.8342857,78.7462125 Z M14.8342857,51.4620019 L14.8342857,44.4631579 L21.6821217,44.4631579 L21.6821217,51.4620019 L14.8342857,51.4620019 Z M26.101002,43.4526316 L30.4467754,47.8959924 L26.101002,52.340317 L21.7542857,47.8959924 L26.101002,43.4526316 Z M14.8342857,38.2503196 L14.8342857,24.2526316 L21.6821217,31.2514756 L14.8342857,38.2503196 Z M14.6868072,24.1777914 L0.994285714,24.1777914 L7.84002141,17.1789474 L14.6868072,24.1777914 Z M14.8342857,24.1777914 L14.8342857,17.1789474 L21.6821217,17.1789474 L21.6821217,24.1777914 L14.8342857,24.1777914 Z" transform="translate(15.720531, 47.962580) rotate(180.000000) translate(-15.720531, -47.962580)"></path>
+                            </g>
+                        </g>
+                    </svg>
+                </a>
             </div>
             <div class="event-image">
-                <img src="../assets/DSC09338.jpg" alt="Team Building">
+                <img src="../assets/utopia1.png" alt="Activities">
             </div>
         </section>
 
-        <!-- Weddings -->
-        <section class="event-item">
-            <div class="event-content">
-                <div class="event-overline">SPECIAL CELEBRATIONS</div>
-                <h3 class="event-title">Weddings & Milestone Events</h3>
-                <p class="event-description">Transform your dream celebration into reality. Our elegant ballrooms and intimate venues, combined with award-winning culinary expertise and personalized service, create the perfect setting for weddings, anniversaries, and memorable life events that reflect your unique vision.</p>
-                <div class="event-features">
-                    <div class="event-feature">Custom menu creation</div>
-                    <div class="event-feature">Complimentary couple suite</div>
-                    <div class="event-feature">Professional coordination</div>
-                    <div class="event-feature">Guest accommodation packages</div>
-                </div>
-                <a href="../index.html#booking" class="event-view-more">Inquire Now →</a>
-            </div>
-            <div class="event-image">
-                <img src="../assets/DSC09338.jpg" alt="Weddings">
-            </div>
-        </section>
-
-        <!-- Private Events -->
+        <!-- Private Dinners -->
         <section class="event-item">
             <div class="event-content">
                 <div class="event-overline">EXCLUSIVE EXPERIENCES</div>
-                <h3 class="event-title">Private Dinners & Galas</h3>
+                <h3 class="event-title">Private Dinners</h3>
                 <p class="event-description">Curate an exclusive experience tailored to your vision. Our private event services encompass every detail from bespoke menu development to sophisticated décor, ensuring your gathering reflects your refined taste and exceeds the highest expectations.</p>
-                <div class="event-features">
-                    <div class="event-feature">Exclusive venue access</div>
-                    <div class="event-feature">Chef's special menus</div>
-                    <div class="event-feature">Sommelier wine pairings</div>
-                    <div class="event-feature">Luxury guest experiences</div>
-                </div>
-                <a href="../index.html#booking" class="event-view-more">Inquire Now →</a>
+                <a href="../index.html#booking" class="event-view-more o-button o-button--borders">
+                    <span class="o-button__text">view more</span>
+                    <svg class="o-button__border o-button__border--top" width="36px" height="17px" viewBox="0 0 36 17" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g transform="translate(-68.000000, 0.000000)" class="o-button__border-g" stroke-width="0.5">
+                                <path d="M82.8982358,16.0935809 L69.2057143,16.0935809 L76.05145,9.09473684 L82.8982358,16.0935809 Z M103.658236,16.0935809 L89.9657143,16.0935809 L96.81145,9.09473684 L103.658236,16.0935809 Z M83.0457143,16.0935809 L83.0457143,9.09473684 L89.8925001,9.09473684 L89.8925001,16.0935809 L83.0457143,16.0935809 Z M82.0571429,4.44330601 L86.4039664,1.42108547e-14 L90.7517328,4.44330601 L86.4039664,8.88661203 L82.0571429,4.44330601 Z"></path>
+                            </g>
+                        </g>
+                    </svg>
+                    <svg class="o-button__border o-button__border--right" width="31px" height="63px" viewBox="0 0 31 63" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g transform="translate(-143.000000, -16.000000)" class="o-button__border-g" stroke-width="0.5">
+                                <path d="M143.348571,71.7473684 L157.041093,71.7473684 L150.195357,78.7462125 L143.348571,71.7473684 Z M157.188571,71.5976881 L157.188571,57.6 L164.036407,64.598844 L157.188571,71.5976881 Z M157.188571,78.7462125 L157.188571,71.7473684 L164.036407,71.7473684 L164.036407,78.7462125 L157.188571,78.7462125 Z M157.188571,51.4620019 L157.188571,44.4631579 L164.036407,44.4631579 L164.036407,51.4620019 L157.188571,51.4620019 Z M168.455288,43.4526316 L172.801061,47.8959924 L168.455288,52.340317 L164.108571,47.8959924 L168.455288,43.4526316 Z M157.188571,38.2503196 L157.188571,24.2526316 L164.036407,31.2514756 L157.188571,38.2503196 Z M157.041093,24.1777914 L143.348571,24.1777914 L150.194307,17.1789474 L157.041093,24.1777914 Z M157.188571,24.1777914 L157.188571,17.1789474 L164.036407,17.1789474 L164.036407,24.1777914 L157.188571,24.1777914 Z"></path>
+                            </g>
+                        </g>
+                    </svg>
+                    <svg class="o-button__border o-button__border--bottom" width="36px" height="17px" viewBox="0 0 36 17" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g transform="translate(-68.000000, -79.000000)" class="o-button__border-g" stroke-width="0.5">
+                                <path d="M82.8982358,95.9251598 L69.2057143,95.9251598 L76.05145,88.9263158 L82.8982358,95.9251598 Z M103.658236,95.9251598 L89.9657143,95.9251598 L96.81145,88.9263158 L103.658236,95.9251598 Z M83.0457143,95.9251598 L83.0457143,88.9263158 L89.8925001,88.9263158 L89.8925001,95.9251598 L83.0457143,95.9251598 Z M82.0571429,84.274885 L86.4039664,79.8315789 L90.7517328,84.274885 L86.4039664,88.718191 L82.0571429,84.274885 Z" transform="translate(86.431975, 87.878369) rotate(180.000000) translate(-86.431975, -87.878369)"></path>
+                            </g>
+                        </g>
+                    </svg>
+                    <svg class="o-button__border o-button__border--left" width="31px" height="63px" viewBox="0 0 31 63" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g transform="translate(0.000000, -16.000000)" class="o-button__border-g" stroke-width="0.5">
+                                <path d="M0.994285714,71.7473684 L14.6868072,71.7473684 L7.84107153,78.7462125 L0.994285714,71.7473684 Z M14.8342857,71.5976881 L14.8342857,57.6 L21.6821217,64.598844 L14.8342857,71.5976881 Z M14.8342857,78.7462125 L14.8342857,71.7473684 L21.6821217,71.7473684 L21.6821217,78.7462125 L14.8342857,78.7462125 Z M14.8342857,51.4620019 L14.8342857,44.4631579 L21.6821217,44.4631579 L21.6821217,51.4620019 L14.8342857,51.4620019 Z M26.101002,43.4526316 L30.4467754,47.8959924 L26.101002,52.340317 L21.7542857,47.8959924 L26.101002,43.4526316 Z M14.8342857,38.2503196 L14.8342857,24.2526316 L21.6821217,31.2514756 L14.8342857,38.2503196 Z M14.6868072,24.1777914 L0.994285714,24.1777914 L7.84002141,17.1789474 L14.6868072,24.1777914 Z M14.8342857,24.1777914 L14.8342857,17.1789474 L21.6821217,17.1789474 L21.6821217,24.1777914 L14.8342857,24.1777914 Z" transform="translate(15.720531, 47.962580) rotate(180.000000) translate(-15.720531, -47.962580)"></path>
+                            </g>
+                        </g>
+                    </svg>
+                </a>
             </div>
             <div class="event-image">
-                <img src="../assets/DSC09338.jpg" alt="Private Events">
+                <img src="../assets/5.png" alt="Private Dinners">
             </div>
         </section>
     </div>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer-new">
         <div class="footer-wrapper">
-            <div class="footer-container">
-                <div class="footer-section">
-                    <h3>CONTACT</h3>
-                    <p>Hotel Centrum Prizren<br>
-                    Shadervan Street<br>
-                    Prizren, Kosovo<br><br>
-                    <a href="tel:+38329250100">+383 29 250 100</a><br>
-                    <a href="mailto:info@hotelcentrumprizren.com">info@hotelcentrumprizren.com</a></p>
+            <!-- Top Section: Newsletter & Tagline -->
+            <div class="footer-top-section">
+                <!-- Left: Newsletter Form -->
+                <div class="footer-newsletter">
+                    <h3 class="footer-newsletter-title">SUBSCRIBE TO OUR NEWSLETTER</h3>
+                    <input type="text" placeholder="NAME *" class="footer-input">
+                    <input type="email" placeholder="E-MAIL *" class="footer-input">
+                    <button class="footer-subscribe-btn">SUBSCRIBE</button>
                 </div>
-                <div class="footer-section">
-                    <h3>HOURS</h3>
-                    <p>Reception: 24/7<br>
-                    Breakfast: 7:00 - 10:30 AM<br>
-                    Restaurant: 12:00 - 11:00 PM<br>
-                    Bar: 10:00 AM - 12:00 AM</p>
-                </div>
-                <div class="footer-section">
-                    <h3>EXPLORE</h3>
-                    <p><a href="../index.html">Home</a><br>
-                    <a href="our-rooms.html">Our Rooms</a><br>
-                    <a href="restaurant-menu.html">Restaurant</a><br>
-                    <a href="../index.html#booking">Booking</a></p>
+
+                <!-- Right: Tagline -->
+                <div class="footer-tagline">
+                    <p class="footer-tagline-small">AN UNFORGETTABLE EXPERIENCE</p>
+                    <h2 class="footer-tagline-large">EMBARK ON A JOURNEY OF UNIQUE CHARM</h2>
                 </div>
             </div>
-            <div class="footer-divider"></div>
-            <div class="footer-container footer-container--copyright">
-                <div class="footer-copyright">
-                    <span>&copy; 2026 Hotel Centrum Prizren. All rights reserved.</span>
+
+            <!-- Middle Section: Links, Logo, Social -->
+            <div class="footer-middle-section">
+                <!-- Left: Links -->
+                <div class="footer-links">
+                    <ul class="footer-links-list">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="our-rooms.html">Our Rooms</a></li>
+                        <li><a href="dining.html">Dining</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="experiences.html">Experiences</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
                 </div>
+
+                <!-- Center: Logo -->
+                <div class="footer-logo-section">
+                    <img src="../assets/Logo.png" alt="Hotel Centrum Logo" class="footer-logo">
+                </div>
+
+                <!-- Right: Social & Contact -->
+                <div class="footer-contact">
+                    <ul class="footer-social-list">
+                        <li>
+                            <a href="https://www.facebook.com/Hotel.Centrum.Prizren" target="_blank" aria-label="Facebook">
+                                <svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M24 12.0733C24 5.40541 18.6274 0 12 0C5.37258 0 0 5.40541 0 12.0733C0 18.0995 4.38823 23.0943 10.125 24V15.5633H7.07812V12.0733H10.125V9.41343C10.125 6.38755 11.9166 4.71615 14.6576 4.71615C15.9705 4.71615 17.3438 4.95195 17.3438 4.95195V7.92313H15.8306C14.3399 7.92313 13.875 8.85379 13.875 9.80857V12.0733H17.2031L16.6711 15.5633H13.875V24C19.6118 23.0943 24 18.0995 24 12.0733Z"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/hotelcentrum/" target="_blank" aria-label="Instagram">
+                                <svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2.16094C15.2063 2.16094 15.5859 2.175 16.8469 2.23125C18.0188 2.28281 18.6516 2.47969 19.0734 2.64375C19.6313 2.85938 20.0344 3.12188 20.4516 3.53906C20.8734 3.96094 21.1313 4.35938 21.3469 4.91719C21.5109 5.33906 21.7078 5.97656 21.7594 7.14375C21.8156 8.40937 21.8297 8.78906 21.8297 12C21.8297 15.2109 21.8156 15.5906 21.7594 16.8562C21.7078 18.0234 21.5109 18.6609 21.3469 19.0828C21.1313 19.6406 20.8687 20.0437 20.4516 20.4609C20.0297 20.8828 19.6313 21.1406 19.0734 21.3562C18.6516 21.5203 18.0141 21.7172 16.8469 21.7687C15.5813 21.825 15.2016 21.8391 12 21.8391C8.79844 21.8391 8.41875 21.825 7.15313 21.7687C5.98594 21.7172 5.34844 21.5203 4.92656 21.3562C4.36875 21.1406 3.96563 20.8781 3.54844 20.4609C3.12656 20.0391 2.86875 19.6406 2.65313 19.0828C2.48906 18.6609 2.29219 18.0234 2.24063 16.8562C2.18438 15.5906 2.17031 15.2109 2.17031 12C2.17031 8.78906 2.18438 8.40937 2.24063 7.14375C2.29219 5.97656 2.48906 5.33906 2.65313 4.91719C2.86875 4.35938 3.13125 3.95625 3.54844 3.53906C3.97031 3.11719 4.36875 2.85938 4.92656 2.64375C5.34844 2.47969 5.98594 2.28281 7.15313 2.23125C8.41406 2.175 8.79375 2.16094 12 2.16094ZM12 0C8.74219 0 8.33438 0.0140625 7.05469 0.0703125C5.77969 0.126563 4.90313 0.332812 4.14375 0.628125C3.35156 0.9375 2.68125 1.34531 2.01563 2.01562C1.34531 2.68125 0.9375 3.35156 0.628125 4.13906C0.332812 4.90313 0.126563 5.775 0.0703125 7.05C0.0140625 8.33437 0 8.74219 0 12C0 15.2578 0.0140625 15.6656 0.0703125 16.9453C0.126563 18.2203 0.332812 19.0969 0.628125 19.8563C0.9375 20.6484 1.34531 21.3188 2.01563 21.9844C2.68125 22.65 3.35156 23.0625 4.13906 23.3719C4.90313 23.6672 5.775 23.8734 7.05 23.9297C8.32969 23.9859 8.7375 24 12 24C15.2625 24 15.6703 23.9859 16.95 23.9297C18.225 23.8734 19.1016 23.6672 19.8609 23.3719C20.6484 23.0625 21.3188 22.65 21.9844 21.9844C22.65 21.3188 23.0625 20.6484 23.3719 19.8609C23.6672 19.0969 23.8734 18.225 23.9297 16.95C23.9859 15.6703 24 15.2625 24 12C24 8.7375 23.9859 8.32969 23.9297 7.05C23.8734 5.775 23.6672 4.89844 23.3719 4.13906C23.0625 3.35156 22.65 2.68125 21.9844 2.01562C21.3188 1.35 20.6484 0.9375 19.8609 0.628125C19.0969 0.332812 18.225 0.126563 16.9453 0.0703125C15.6656 0.0140625 15.2578 0 12 0Z"/>
+                                    <path d="M12 5.83594C8.59688 5.83594 5.83594 8.59688 5.83594 12C5.83594 15.4031 8.59688 18.1641 12 18.1641C15.4031 18.1641 18.1641 15.4031 18.1641 12C18.1641 8.59688 15.4031 5.83594 12 5.83594ZM12 15.9984C9.79219 15.9984 8.00156 14.2078 8.00156 12C8.00156 9.79219 9.79219 8.00156 12 8.00156C14.2078 8.00156 15.9984 9.79219 15.9984 12C15.9984 14.2078 14.2078 15.9984 12 15.9984Z"/>
+                                    <path d="M18.4078 7.03906C19.2812 7.03906 20 6.32031 20 5.44688C20 4.57344 19.2812 3.85469 18.4078 3.85469C17.5344 3.85469 16.8156 4.57344 16.8156 5.44688C16.8156 6.32031 17.5344 7.03906 18.4078 7.03906Z"/>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="footer-contact-info">
+                        <p>
+                            <svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px; flex-shrink: 0;">
+                                <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z"/>
+                            </svg>
+                            <a href="https://maps.app.goo.gl/meZpaajjWmE7hPes5" target="_blank">Bujtinat 1, Prizren 20000</a>
+                        </p>
+                        <p>
+                            <svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px; flex-shrink: 0;">
+                                <path d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.69 14.9 16.08 14.82 16.43 14.93C17.55 15.3 18.75 15.5 20 15.5C20.55 15.5 21 15.95 21 16.5V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z"/>
+                            </svg>
+                            <span>+383 49 840 030</span>
+                        </p>
+                        <p>
+                            <svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px; flex-shrink: 0;">
+                                <path d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z"/>
+                            </svg>
+                            <a href="mailto:info@hotelcentrumprizren.com">info@hotelcentrumprizren.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Section: Copyright -->
+            <div class="footer-bottom-section">
+                <p class="footer-copyright-text">Managed by <a href="https://rritukreativ.studio" target="_blank" style="color: inherit; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#857344'" onmouseout="this.style.color='inherit'">Rritu Kreativ Studio</a></p>
             </div>
         </div>
     </footer>
@@ -465,5 +675,51 @@
             }
         });
     </script>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container" id="chatbot">
+        <button class="chatbot-toggle" id="chatbotToggle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 15C21 15.5304 20.7893 16.0391 20.4142 16.4142C20.0391 16.7893 19.5304 17 19 17H7L3 21V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V15Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <div class="chatbot-header-title">
+                    <h3>Prizren Guide</h3>
+                    <p>Ask about Prizren's history & tourism</p>
+                </div>
+                <button class="chatbot-close" id="chatbotClose">×</button>
+            </div>
+            
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="chatbot-message bot-message">
+                    <div class="message-content">
+                        Welcome! Ask me anything about Prizren's rich history and tourist attractions. Choose a topic or type your question.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chatbot-suggestions" id="chatbotSuggestions">
+                <button class="suggestion-btn" data-question="history">History</button>
+                <button class="suggestion-btn" data-question="attractions">Attractions</button>
+                <button class="suggestion-btn" data-question="culture">Culture</button>
+                <button class="suggestion-btn" data-question="food">Food</button>
+            </div>
+            
+            <div class="chatbot-input-wrapper">
+                <input type="text" class="chatbot-input" id="chatbotInput" placeholder="Ask about Prizren...">
+                <button class="chatbot-send" id="chatbotSend">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 2L11 13" stroke="#504a23" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="#504a23" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../chatbot.js"></script>
 </body>
 </html>

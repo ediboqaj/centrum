@@ -4,26 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank You - Hotel Centrum Prizren</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/Logo.png">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../footer-new.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f7f5ef;
+        .thank-you-container {
+            min-height: 80vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            min-height: 100vh;
-            text-align: center;
-            padding: 20px;
+            background-color: #f7f5ef;
+            padding: 40px 20px;
         }
         
-        .container {
+        .thank-you-content {
             max-width: 600px;
+            text-align: center;
         }
         
         .checkmark {
@@ -42,21 +40,21 @@
             height: 40px;
         }
         
-        h1 {
+        .thank-you-content h1 {
             font-size: 42px;
             color: #955013;
             margin-bottom: 20px;
             font-weight: 300;
         }
         
-        p {
+        .thank-you-content p {
             font-size: 18px;
             color: #5c5c5c;
             margin-bottom: 15px;
             line-height: 1.6;
         }
         
-        .button {
+        .thank-you-button {
             display: inline-block;
             margin-top: 30px;
             padding: 15px 40px;
@@ -68,7 +66,7 @@
             transition: opacity 0.3s;
         }
         
-        .button:hover {
+        .thank-you-button:hover {
             opacity: 0.8;
         }
         
@@ -80,22 +78,113 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="checkmark">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5 13l4 4L19 7" stroke="#955013" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+    <div class="thank-you-container">
+        <div class="thank-you-content">
+            <div class="checkmark">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 13l4 4L19 7" stroke="#955013" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            
+            <h1>Request Received!</h1>
+            
+            <p>Thank you for your booking request at Hotel Centrum Prizren.</p>
+            <p>We have received your information and will get back to you shortly to confirm your reservation.</p>
+            
+            <a href="../index.html" class="thank-you-button">Return to Home</a>
+            
+            <p class="auto-redirect">Redirecting in <span id="countdown">5</span> seconds...</p>
         </div>
-        
-        <h1>Request Received!</h1>
-        
-        <p>Thank you for your booking request at Hotel Centrum Prizren.</p>
-        <p>We have received your information and will get back to you shortly to confirm your reservation.</p>
-        
-        <a href="index.html" class="button">Return to Home</a>
-        
-        <p class="auto-redirect">Redirecting in <span id="countdown">5</span> seconds...</p>
     </div>
+    
+    <!-- Footer -->
+    <footer class="footer-new">
+        <div class="footer-wrapper">
+            <!-- Top Section: Newsletter & Tagline -->
+            <div class="footer-top-section">
+                <!-- Left: Newsletter Form -->
+                <div class="footer-newsletter">
+                    <h3 class="footer-newsletter-title">SUBSCRIBE TO OUR NEWSLETTER</h3>
+                    <input type="text" placeholder="NAME *" class="footer-input">
+                    <input type="email" placeholder="E-MAIL *" class="footer-input">
+                    <button class="footer-subscribe-btn">SUBSCRIBE</button>
+                </div>
+
+                <!-- Right: Tagline -->
+                <div class="footer-tagline">
+                    <p class="footer-tagline-small">AN UNFORGETTABLE EXPERIENCE</p>
+                    <h2 class="footer-tagline-large">EMBARK ON A JOURNEY OF UNIQUE CHARM</h2>
+                </div>
+            </div>
+
+            <!-- Middle Section: Links, Logo, Social -->
+            <div class="footer-middle-section">
+                <!-- Left: Links -->
+                <div class="footer-links">
+                    <ul class="footer-links-list">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="our-rooms.html">Our Rooms</a></li>
+                        <li><a href="dining.html">Dining</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="experiences.html">Experiences</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Center: Logo -->
+                <div class="footer-logo-section">
+                    <img src="../assets/Logo.png" alt="Hotel Centrum Logo" class="footer-logo">
+                </div>
+
+                <!-- Right: Social & Contact -->
+                <div class="footer-contact">
+                    <ul class="footer-social-list">
+                        <li>
+                            <a href="https://www.facebook.com/Hotel.Centrum.Prizren" target="_blank" aria-label="Facebook">
+                                <svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M24 12.0733C24 5.40541 18.6274 0 12 0C5.37258 0 0 5.40541 0 12.0733C0 18.0995 4.38823 23.0943 10.125 24V15.5633H7.07812V12.0733H10.125V9.41343C10.125 6.38755 11.9166 4.71615 14.6576 4.71615C15.9705 4.71615 17.3438 4.95195 17.3438 4.95195V7.92313H15.8306C14.3399 7.92313 13.875 8.85379 13.875 9.80857V12.0733H17.2031L16.6711 15.5633H13.875V24C19.6118 23.0943 24 18.0995 24 12.0733Z"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/hotelcentrum/" target="_blank" aria-label="Instagram">
+                                <svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2.16094C15.2063 2.16094 15.5859 2.175 16.8469 2.23125C18.0188 2.28281 18.6516 2.47969 19.0734 2.64375C19.6313 2.85938 20.0344 3.12188 20.4516 3.53906C20.8734 3.96094 21.1313 4.35938 21.3469 4.91719C21.5109 5.33906 21.7078 5.97656 21.7594 7.14375C21.8156 8.40937 21.8297 8.78906 21.8297 12C21.8297 15.2109 21.8156 15.5906 21.7594 16.8562C21.7078 18.0234 21.5109 18.6609 21.3469 19.0828C21.1313 19.6406 20.8687 20.0437 20.4516 20.4609C20.0297 20.8828 19.6313 21.1406 19.0734 21.3562C18.6516 21.5203 18.0141 21.7172 16.8469 21.7687C15.5813 21.825 15.2016 21.8391 12 21.8391C8.79844 21.8391 8.41875 21.825 7.15313 21.7687C5.98594 21.7172 5.34844 21.5203 4.92656 21.3562C4.36875 21.1406 3.96563 20.8781 3.54844 20.4609C3.12656 20.0391 2.86875 19.6406 2.65313 19.0828C2.48906 18.6609 2.29219 18.0234 2.24063 16.8562C2.18438 15.5906 2.17031 15.2109 2.17031 12C2.17031 8.78906 2.18438 8.40937 2.24063 7.14375C2.29219 5.97656 2.48906 5.33906 2.65313 4.91719C2.86875 4.35938 3.13125 3.95625 3.54844 3.53906C3.97031 3.11719 4.36875 2.85938 4.92656 2.64375C5.34844 2.47969 5.98594 2.28281 7.15313 2.23125C8.41406 2.175 8.79375 2.16094 12 2.16094ZM12 0C8.74219 0 8.33438 0.0140625 7.05469 0.0703125C5.77969 0.126563 4.90313 0.332812 4.14375 0.628125C3.35156 0.9375 2.68125 1.34531 2.01563 2.01562C1.34531 2.68125 0.9375 3.35156 0.628125 4.13906C0.332812 4.90313 0.126563 5.775 0.0703125 7.05C0.0140625 8.33437 0 8.74219 0 12C0 15.2578 0.0140625 15.6656 0.0703125 16.9453C0.126563 18.2203 0.332812 19.0969 0.628125 19.8563C0.9375 20.6484 1.34531 21.3188 2.01563 21.9844C2.68125 22.65 3.35156 23.0625 4.13906 23.3719C4.90313 23.6672 5.775 23.8734 7.05 23.9297C8.32969 23.9859 8.7375 24 12 24C15.2625 24 15.6703 23.9859 16.95 23.9297C18.225 23.8734 19.1016 23.6672 19.8609 23.3719C20.6484 23.0625 21.3188 22.65 21.9844 21.9844C22.65 21.3188 23.0625 20.6484 23.3719 19.8609C23.6672 19.0969 23.8734 18.225 23.9297 16.95C23.9859 15.6703 24 15.2625 24 12C24 8.7375 23.9859 8.32969 23.9297 7.05C23.8734 5.775 23.6672 4.89844 23.3719 4.13906C23.0625 3.35156 22.65 2.68125 21.9844 2.01562C21.3188 1.35 20.6484 0.9375 19.8609 0.628125C19.0969 0.332812 18.225 0.126563 16.9453 0.0703125C15.6656 0.0140625 15.2578 0 12 0Z"/>
+                                    <path d="M12 5.83594C8.59688 5.83594 5.83594 8.59688 5.83594 12C5.83594 15.4031 8.59688 18.1641 12 18.1641C15.4031 18.1641 18.1641 15.4031 18.1641 12C18.1641 8.59688 15.4031 5.83594 12 5.83594ZM12 15.9984C9.79219 15.9984 8.00156 14.2078 8.00156 12C8.00156 9.79219 9.79219 8.00156 12 8.00156C14.2078 8.00156 15.9984 9.79219 15.9984 12C15.9984 14.2078 14.2078 15.9984 12 15.9984Z"/>
+                                    <path d="M18.4078 7.03906C19.2812 7.03906 20 6.32031 20 5.44688C20 4.57344 19.2812 3.85469 18.4078 3.85469C17.5344 3.85469 16.8156 4.57344 16.8156 5.44688C16.8156 6.32031 17.5344 7.03906 18.4078 7.03906Z"/>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="footer-contact-info">
+                        <p>
+                            <svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px; flex-shrink: 0;">
+                                <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z"/>
+                            </svg>
+                            <a href="https://maps.app.goo.gl/meZpaajjWmE7hPes5" target="_blank">Bujtinat 1, Prizren 20000</a>
+                        </p>
+                        <p>
+                            <svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px; flex-shrink: 0;">
+                                <path d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.69 14.9 16.08 14.82 16.43 14.93C17.55 15.3 18.75 15.5 20 15.5C20.55 15.5 21 15.95 21 16.5V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z"/>
+                            </svg>
+                            <span>+383 49 840 030</span>
+                        </p>
+                        <p>
+                            <svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px; flex-shrink: 0;">
+                                <path d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z"/>
+                            </svg>
+                            <a href="mailto:info@hotelcentrumprizren.com">info@hotelcentrumprizren.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Section: Copyright -->
+            <div class="footer-bottom-section">
+                <p class="footer-copyright-text">Managed by <a href="https://rritukreativ.studio" target="_blank" style="color: inherit; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#857344'" onmouseout="this.style.color='inherit'">Rritu Kreativ Studio</a></p>
+            </div>
+        </div>
+    </footer>
     
     <script>
         let seconds = 5;
@@ -107,9 +196,55 @@
             
             if (seconds <= 0) {
                 clearInterval(timer);
-                window.location.href = 'index.html';
+                window.location.href = '../index.html';
             }
         }, 1000);
     </script>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container" id="chatbot">
+        <button class="chatbot-toggle" id="chatbotToggle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 15C21 15.5304 20.7893 16.0391 20.4142 16.4142C20.0391 16.7893 19.5304 17 19 17H7L3 21V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V15Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <div class="chatbot-header-title">
+                    <h3>Prizren Guide</h3>
+                    <p>Ask about Prizren's history & tourism</p>
+                </div>
+                <button class="chatbot-close" id="chatbotClose">×</button>
+            </div>
+            
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="chatbot-message bot-message">
+                    <div class="message-content">
+                        Welcome! Ask me anything about Prizren's rich history and tourist attractions. Choose a topic or type your question.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chatbot-suggestions" id="chatbotSuggestions">
+                <button class="suggestion-btn" data-question="history">History</button>
+                <button class="suggestion-btn" data-question="attractions">Attractions</button>
+                <button class="suggestion-btn" data-question="culture">Culture</button>
+                <button class="suggestion-btn" data-question="food">Food</button>
+            </div>
+            
+            <div class="chatbot-input-wrapper">
+                <input type="text" class="chatbot-input" id="chatbotInput" placeholder="Ask about Prizren...">
+                <button class="chatbot-send" id="chatbotSend">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 2L11 13" stroke="#504a23" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="#504a23" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../chatbot.js"></script>
 </body>
 </html>

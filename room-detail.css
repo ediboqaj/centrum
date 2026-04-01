@@ -278,7 +278,7 @@ body {
     overflow-x: auto;
     padding-bottom: 4px;
     scrollbar-width: thin;
-    scrollbar-color: #955013 #e8e5db;
+    scrollbar-color: #857344 #e8e5db;
 }
 
 .gallery-thumbs img {
@@ -295,7 +295,7 @@ body {
 .gallery-thumbs img.active,
 .gallery-thumbs img:hover {
     opacity: 1;
-    border-color: #955013;
+    border-color: #857344;
 }
 
 /* ---- Details Section ---- */
@@ -317,14 +317,14 @@ body {
     font-size: 12px;
     letter-spacing: 0.25em;
     text-transform: uppercase;
-    color: #955013;
+    color: #857344;
     margin-bottom: 20px;
 }
 
 .room-details-left h2 {
     font-size: 42px;
     font-weight: 300;
-    color: #955013;
+    color: #857344;
     text-transform: uppercase;
     line-height: 1.15;
     margin-bottom: 30px;
@@ -343,7 +343,7 @@ body {
     font-size: 12px;
     letter-spacing: 0.25em;
     text-transform: uppercase;
-    color: #955013;
+    color: #857344;
     margin-bottom: 28px;
 }
 
@@ -362,7 +362,7 @@ body {
     color: #5c5c5c;
 }
 
-.amenity-item svg { flex-shrink: 0; color: #955013; }
+.amenity-item svg { flex-shrink: 0; color: #857344; }
 
 /* ---- Room Stats ---- */
 .room-stats {
@@ -380,7 +380,7 @@ body {
 .stat-value {
     font-size: 30px;
     font-weight: 300;
-    color: #955013;
+    color: #857344;
     display: block;
 }
 
@@ -426,7 +426,7 @@ body {
 .btn-book {
     display: inline-block;
     padding: 16px 44px;
-    background: #955013;
+    background: #857344;
     color: white;
     text-decoration: none;
     font-size: 13px;
@@ -462,7 +462,7 @@ body {
     font-size: 12px;
     letter-spacing: 0.3em;
     text-transform: uppercase;
-    color: #955013;
+    color: #857344;
     text-align: center;
     margin-bottom: 48px;
 }

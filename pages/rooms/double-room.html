@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Double Room — Hotel Centrum Prizren</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../../assets/Logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
     <link href="https://db.onlinewebfonts.com/c/19560807c484bbbfcd37de7a0011a829?family=Canela-Light" rel="stylesheet">
     <link rel="stylesheet" href="../../room-detail.css">
+    <link rel="stylesheet" href="../../footer-new.css">
     <link rel="preload" href="../../assets/Double Room/DSC08679.jpg" as="image" fetchpriority="high">
 </head>
 <body>
@@ -36,8 +40,8 @@
             <ul class="menu-items">
                 <li><a href="../../index.html" class="menu-item" data-img="../../assets/DSC09338.jpg">Hotel</a></li>
                 <li><a href="../our-rooms.html" class="menu-item" data-img="../../assets/Double Room/DSC08679.jpg">Our Rooms</a></li>
-                <li><a href="../restaurant-menu.html" class="menu-item" data-img="../../assets/22.png">Dinning</a></li>
-                <li><a href="#" class="menu-item" data-img="../../assets/utopia1.png">Utopia</a></li>
+                <li><a href="../dining.html" class="menu-item" data-img="../../assets/22.png">Dinning</a></li>
+                <li><a href="https://utopia-rooftop.com/" class="menu-item" data-img="../../assets/utopia1.png" target="_blank">Utopia</a></li>
                 <li><a href="../events.html" class="menu-item" data-img="../../assets/4.png">Events</a></li>
                 <li><a href="../experiences.html" class="menu-item" data-img="../../assets/4.Albanian.jpg">Experiences</a></li>
                 <li><a href="../contact.html" class="menu-item" data-img="../../assets/6.png">Contact</a></li>
@@ -139,8 +143,90 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <span>&copy; 2026 Hotel Centrum Prizren. All rights reserved.</span>
+    <footer class="footer-new">
+        <div class="footer-wrapper">
+            <!-- Top Section: Newsletter & Tagline -->
+            <div class="footer-top-section">
+                <!-- Left: Newsletter Form -->
+                <div class="footer-newsletter">
+                    <h3 class="footer-newsletter-title">SUBSCRIBE TO OUR NEWSLETTER</h3>
+                    <input type="text" placeholder="NAME *" class="footer-input">
+                    <input type="email" placeholder="E-MAIL *" class="footer-input">
+                    <button class="footer-subscribe-btn">SUBSCRIBE</button>
+                </div>
+
+                <!-- Right: Tagline -->
+                <div class="footer-tagline">
+                    <p class="footer-tagline-small">AN UNFORGETTABLE EXPERIENCE</p>
+                    <h2 class="footer-tagline-large">EMBARK ON A JOURNEY OF UNIQUE CHARM</h2>
+                </div>
+            </div>
+
+            <!-- Middle Section: Links, Logo, Social -->
+            <div class="footer-middle-section">
+                <!-- Left: Links -->
+                <div class="footer-links">
+                    <ul class="footer-links-list">
+                        <li><a href="../../index.html">Home</a></li>
+                        <li><a href="../our-rooms.html">Our Rooms</a></li>
+                        <li><a href="../dining.html">Dining</a></li>
+                        <li><a href="../events.html">Events</a></li>
+                        <li><a href="../experiences.html">Experiences</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Center: Logo -->
+                <div class="footer-logo-section">
+                    <img src="../../assets/Logo.png" alt="Hotel Centrum Logo" class="footer-logo">
+                </div>
+
+                <!-- Right: Social & Contact -->
+                <div class="footer-contact">
+                    <ul class="footer-social-list">
+                        <li>
+                            <a href="https://facebook.com" target="_blank">
+                                <svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24V15.563H7.078V12.073H10.125V9.404C10.125 6.369 11.917 4.715 14.658 4.715C15.970 4.715 17.344 4.953 17.344 4.953V7.928H15.831C14.342 7.928 13.875 8.814 13.875 9.728V12.073H17.203L16.671 15.563H13.875V24C19.612 23.094 24 18.1 24 12.073Z"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://instagram.com" target="_blank">
+                                <svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2.163C15.204 2.163 15.584 2.175 16.85 2.233C20.102 2.381 21.621 3.924 21.769 7.152C21.827 8.417 21.838 8.797 21.838 12.001C21.838 15.206 21.826 15.585 21.769 16.85C21.62 20.075 20.105 21.621 16.85 21.769C15.584 21.827 15.206 21.839 12 21.839C8.796 21.839 8.416 21.827 7.151 21.769C3.891 21.62 2.38 20.07 2.232 16.849C2.174 15.584 2.162 15.205 2.162 12C2.162 8.796 2.175 8.417 2.232 7.151C2.381 3.924 3.896 2.38 7.151 2.232C8.417 2.175 8.796 2.163 12 2.163ZM12 0C8.741 0 8.333 0.014 7.053 0.072C2.695 0.272 0.273 2.69 0.073 7.052C0.014 8.333 0 8.741 0 12C0 15.259 0.014 15.668 0.072 16.948C0.272 21.306 2.690 23.728 7.052 23.928C8.333 23.986 8.741 24 12 24C15.259 24 15.668 23.986 16.948 23.928C21.302 23.728 23.730 21.31 23.927 16.948C23.986 15.668 24 15.259 24 12C24 8.741 23.986 8.333 23.928 7.053C23.732 2.699 21.311 0.273 16.949 0.073C15.668 0.014 15.259 0 12 0ZM12 5.838C8.597 5.838 5.838 8.597 5.838 12C5.838 15.403 8.597 18.162 12 18.162C15.403 18.162 18.162 15.403 18.162 12C18.162 8.597 15.403 5.838 12 5.838ZM12 16C9.791 16 8 14.209 8 12C8 9.791 9.791 8 12 8C14.209 8 16 9.791 16 12C16 14.209 14.209 16 12 16ZM18.406 4.155C18.406 4.955 17.761 5.6 16.961 5.6C16.161 5.6 15.516 4.955 15.516 4.155C15.516 3.355 16.161 2.71 16.961 2.71C17.761 2.71 18.406 3.355 18.406 4.155Z"/>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="footer-contact-info">
+                        <p>
+                            <svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px; flex-shrink: 0;">
+                                <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z"/>
+                            </svg>
+                            <a href="https://maps.app.goo.gl/meZpaajjWmE7hPes5" target="_blank">Bujtinat 1, Prizren 20000</a>
+                        </p>
+                        <p>
+                            <svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px; flex-shrink: 0;">
+                                <path d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.69 14.9 16.08 14.82 16.43 14.93C17.55 15.3 18.75 15.5 20 15.5C20.55 15.5 21 15.95 21 16.5V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z"/>
+                            </svg>
+                            <span>+383 49 840 030</span>
+                        </p>
+                        <p>
+                            <svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px; flex-shrink: 0;">
+                                <path d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z"/>
+                            </svg>
+                            <a href="mailto:info@hotelcentrumprizren.com">info@hotelcentrumprizren.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Section: Copyright -->
+            <div class="footer-bottom-section">
+                <p class="footer-copyright-text">Managed by <a href="https://rritukreativ.studio" target="_blank" style="color: inherit; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#857344'" onmouseout="this.style.color='inherit'">Rritu Kreativ Studio</a></p>
+            </div>
+        </div>
     </footer>
 
     <script>
