@@ -1674,6 +1674,12 @@ body {
 
     .menu-item {
         font-size: 32px;
+        opacity: 0.35;
+        transition: opacity 0.3s ease;
+    }
+
+    .menu-item:hover,
+    .menu-item:focus {
         opacity: 1;
     }
 
@@ -1931,6 +1937,12 @@ body {
     
     .menu-item {
         font-size: 28px;
+        opacity: 0.35;
+        transition: opacity 0.3s ease;
+    }
+
+    .menu-item:hover,
+    .menu-item:focus {
         opacity: 1;
     }
     
@@ -2296,6 +2308,7 @@ body {
     right: 0;
     width: 400px;
     height: 600px;
+    max-height: calc(100vh - 150px);
     background-color: #fafaf8;
     border-radius: 12px;
     box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
@@ -2509,20 +2522,34 @@ body {
 /* Chatbot Responsive */
 @media screen and (max-width: 768px) {
     .chatbot-container {
-        bottom: 20px;
-        right: 20px;
+        bottom: 0;
+        right: 0;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 10000;
     }
     
     .chatbot-toggle {
         width: 56px;
         height: 56px;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 10001;
     }
     
     .chatbot-window {
-        width: calc(100vw - 40px);
-        height: calc(100vh - 160px);
-        bottom: 76px;
-        right: -10px;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        border-radius: 0;
+        position: fixed;
+        max-height: none;
+    }
     }
     
     .chatbot-header-title h3 {

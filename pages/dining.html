@@ -6,7 +6,7 @@
     <title>Restaurants and Bars — Hotel Centrum Prizren</title>
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="../assets/Logo.png">
+    <link rel="icon" type="image/png" href="../assets/logoC.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
@@ -173,7 +173,7 @@
             display: flex;
             align-items: flex-end;
             cursor: pointer;
-            opacity: 1 !important;
+            opacity: 1;
         }
 
         /* Override overlay menu-item styling */
@@ -184,7 +184,12 @@
             cursor: pointer;
             align-items: unset;
             overflow: visible;
-            font-size: 42px;
+            opacity: 0.35;
+            transition: opacity 0.3s ease;
+        }
+
+        .menu-overlay .menu-item:hover {
+            opacity: 1;
         }
 
         .menu-item img {
