@@ -235,30 +235,20 @@
         }
 
         .event-view-more {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 14px;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: #d4af37;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 20px;
-            position: relative;
-            padding: 0 20px;
+            /* Uses standard o-button styles */
         }
 
         .event-view-more::before,
         .event-view-more::after {
-            content: '✤';
-            font-size: 16px;
-            opacity: 0.6;
+            content: '';
         }
 
-        .event-view-more:hover {
-            color: white;
-            transform: scale(1.05);
+        .event-view-more:hover .o-button__text {
+            /* Opacity styling for text */
+        }
+
+        .event-view-more:hover .o-button__border-g {
+            opacity: 0.7;
         }
 
         .event-image {
