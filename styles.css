@@ -16,9 +16,10 @@
 
 body {
     font-family: "Canela-Light", serif;
-    color: white;
+    color: #5c5c5c;
     background-color: #f7f5ef;
     overflow-x: hidden;
+    font-size: 18px;
 }
 
 /* Header */
@@ -66,14 +67,18 @@ body {
 }
 
 .brand-title {
-    font-size: 20px;
+    font-size: 23px;
     font-weight: 400;
+    font-family: "Canela-Light", serif;
+    color: white;
 }
 
 .brand-subtitle {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 300;
     margin: 1px 0;
+    font-family: "Canela-Light", serif;
+    color: white;
 }
 
 @media (max-width: 768px) {
@@ -83,6 +88,16 @@ body {
     
     .brand-subtitle {
         font-size: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .brand-title {
+        font-size: 12px;
+    }
+    
+    .brand-subtitle {
+        font-size: 8px;
     }
 }
 
@@ -144,6 +159,8 @@ body {
     font-weight: 400;
     opacity: 1;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    color: white;
+    font-family: "Canela-Light", serif;
 }
 
 .hero-title {
@@ -152,6 +169,8 @@ body {
     margin-bottom: 60px;
     text-transform: uppercase;
     text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+    color: white;
+    font-family: "Canela-Light", serif;
 }
 
 .hero-text {
@@ -159,6 +178,8 @@ body {
     font-weight: 400;
     opacity: 1;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    color: white;
+    font-family: "Canela-Light", serif;
 }
 
 @media (max-width: 1024px) {
@@ -247,12 +268,13 @@ body {
 }
 
 .info-title {
-    font-size: 50px;
+    font-size: 58px;
     font-weight: 300;
     color: #955013;
     margin-bottom: 40px;
     line-height: 1.2;
     text-transform: uppercase;
+    font-family: "Canela-Light", serif;
 }
 
 @media (max-width: 768px) {
@@ -277,6 +299,7 @@ body {
     margin-right: 70px;
     font-weight: 300;
     text-align: justify;
+    font-family: "Canela-Light", serif;
 }
 
 @media (max-width: 1024px) {
@@ -363,6 +386,7 @@ body {
     position: relative;
     z-index: 1;
     text-transform: uppercase;
+    font-family: "Canela-Light", serif;
 }
 
 .o-button__border {
@@ -442,15 +466,17 @@ body {
     margin-bottom: 20px;
     letter-spacing: 2px;
     font-weight: 400;
+    font-family: "Canela-Light", serif;
 }
 
 .rooms-title {
-    font-size: 50px;
+    font-size: 58px;
     font-weight: 300;
     color: #955013;
     margin-bottom: 40px;
     line-height: 1.2;
     text-transform: uppercase;
+    font-family: "Canela-Light", serif;
 }
 
 @media (max-width: 768px) {
@@ -481,6 +507,7 @@ body {
     line-height: 1;
     text-decoration: none;
     display: block;
+    font-family: "Canela-Light", serif;
 }
 
 @media (max-width: 768px) {
@@ -522,6 +549,7 @@ body {
     object-position: center;
     display: block;
     transition: opacity 0.3s ease;
+    flex-shrink: 0;
 }
 
 /* Dinner Section */
@@ -565,15 +593,17 @@ body {
     margin-bottom: 20px;
     letter-spacing: 2px;
     font-weight: 400;
+    font-family: "Canela-Light", serif;
 }
 
 .dinner-title {
-    font-size: 50px;
+    font-size: 58px;
     font-weight: 300;
     color: #955013;
     margin-bottom: 40px;
     line-height: 1.2;
     text-transform: uppercase;
+    font-family: "Canela-Light", serif;
 }
 
 @media (max-width: 768px) {
@@ -596,6 +626,7 @@ body {
     color: #5c5c5c;
     margin-bottom: 40px;
     font-weight: 300;
+    font-family: "Canela-Light", serif;
 }
 
 @media (max-width: 1024px) {
@@ -708,6 +739,12 @@ body {
     }
 }
 
+@media (max-width: 480px) {
+    .restaurant-image-item {
+        width: 100%;
+    }
+}
+
 .image-item {
     flex: 1;
     overflow: hidden;
@@ -811,6 +848,18 @@ body {
     transition: opacity 0.3s ease;
 }
 
+@media (max-width: 768px) {
+    .bar-image {
+        height: 500px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bar-image {
+        height: 400px;
+    }
+}
+
 .bar-text-right {
     flex: 1;
 }
@@ -828,6 +877,7 @@ body {
     margin-bottom: 20px;
     letter-spacing: 2px;
     font-weight: 400;
+    font-family: "Canela-Light", serif;
 }
 
 @media (max-width: 768px) {
@@ -837,12 +887,13 @@ body {
 }
 
 .bar-title {
-    font-size: 50px;
+    font-size: 58px;
     font-weight: 300;
     color: #955013;
     margin-bottom: 40px;
     line-height: 1.2;
     text-transform: uppercase;
+    font-family: "Canela-Light", serif;
 }
 
 @media (max-width: 1024px) {
@@ -871,6 +922,7 @@ body {
     color: #5c5c5c;
     margin-bottom: 40px;
     font-weight: 300;
+    font-family: "Canela-Light", serif;
 }
 
 @media (max-width: 1024px) {
@@ -958,15 +1010,17 @@ body {
     margin-bottom: 20px;
     letter-spacing: 2px;
     font-weight: 400;
+    font-family: "Canela-Light", serif;
 }
 
 .spa-title {
-    font-size: 50px;
+    font-size: 58px;
     font-weight: 300;
     color: #955013;
     margin-bottom: 40px;
     line-height: 1.2;
     text-transform: uppercase;
+    font-family: "Canela-Light", serif;
 }
 
 @media (max-width: 768px) {
@@ -989,6 +1043,7 @@ body {
     color: #5c5c5c;
     margin-bottom: 40px;
     font-weight: 300;
+    font-family: "Canela-Light", serif;
 }
 
 .spa-description p {
@@ -1039,15 +1094,17 @@ body {
     margin-bottom: 20px;
     letter-spacing: 2px;
     font-weight: 400;
+    font-family: "Canela-Light", serif;
 }
 
 .booking-title {
-    font-size: 50px;
+    font-size: 58px;
     font-weight: 300;
     color: #955013;
     margin-bottom: 30px;
     line-height: 1.2;
     text-transform: uppercase;
+    font-family: "Canela-Light", serif;
 }
 
 @media (max-width: 768px) {
@@ -1069,6 +1126,7 @@ body {
     color: #5c5c5c;
     font-weight: 300;
     line-height: 1.6;
+    font-family: "Canela-Light", serif;
 }
 
 @media (max-width: 768px) {
@@ -1538,11 +1596,13 @@ body {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
 }
 
 .menu-overlay.active {
     opacity: 1;
     visibility: visible;
+    pointer-events: auto;
 }
 
 .menu-close {
@@ -1607,7 +1667,7 @@ body {
     font-size: 42px;
     font-weight: 300;
     transition: opacity 0.3s ease;
-    font-family: "Canela-Light", 'Cormorant Garamond', 'Georgia', serif;
+    font-family: "Canela-Light", serif;
     text-transform: uppercase;
     display: block;
     width: 100%;
@@ -1679,7 +1739,7 @@ body {
     text-decoration: none;
     font-size: 22px;
     font-weight: 300;
-    font-family: "Canela-Light", 'Cormorant Garamond', 'Georgia', serif;
+    font-family: "Canela-Light", serif;
     transition: color 0.25s ease, opacity 0.25s ease;
     display: block;
     padding: 6px 0;
@@ -2812,12 +2872,11 @@ body {
 /* Chatbot Responsive */
 @media screen and (max-width: 768px) {
     .chatbot-container {
-        bottom: 0;
-        right: 0;
+        bottom: 30px;
+        right: 30px;
         position: fixed;
-        width: 100%;
-        height: 100%;
-        z-index: 10000;
+        z-index: 1000;
+        pointer-events: none;
     }
     
     .chatbot-toggle {
@@ -2827,6 +2886,7 @@ body {
         bottom: 20px;
         right: 20px;
         z-index: 10001;
+        pointer-events: auto;
     }
     
     .chatbot-window {
@@ -2839,7 +2899,7 @@ body {
         border-radius: 0;
         position: fixed;
         max-height: none;
-    }
+        pointer-events: auto;
     }
     
     .chatbot-header-title h3 {

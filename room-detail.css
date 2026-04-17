@@ -8,6 +8,7 @@ body {
     color: #5c5c5c;
     background-color: #f7f5ef;
     overflow-x: hidden;
+    font-size: 18px;
 }
 
 /* ---- Header (shared with main site) ---- */
@@ -42,7 +43,12 @@ body {
     color: white;
 }
 
-.brand-title  { font-size: 20px; font-weight: 400; color: white; }
+.brand-title  { 
+    font-size: 23px; 
+    font-weight: 400; 
+    color: white; 
+    font-family: "Canela-Light", serif;
+}
 
 /* ---- Menu Toggle ---- */
 .menu-toggle {
@@ -78,11 +84,13 @@ body {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.7s cubic-bezier(0.4,0,0.2,1), visibility 0.7s cubic-bezier(0.4,0,0.2,1);
+    pointer-events: none;
 }
 
 .menu-overlay.active {
     opacity: 1;
     visibility: visible;
+    pointer-events: auto;
 }
 
 .menu-close {
@@ -140,7 +148,7 @@ body {
     color: #f7f5fe;
     opacity: 0.35;
     text-decoration: none;
-    font-size: 42px;
+    font-size: 48px;
     font-weight: 300;
     transition: opacity 0.3s ease;
     font-family: "Canela-Light", 'Cormorant Garamond', Georgia, serif;
@@ -203,11 +211,12 @@ body {
 }
 
 .room-hero-title {
-    font-size: 58px;
+    font-size: 67px;
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+    font-family: "Canela-Light", serif;
 }
 
 /* ---- Gallery ---- */
@@ -322,20 +331,22 @@ body {
 }
 
 .room-details-left h2 {
-    font-size: 42px;
+    font-size: 48px;
     font-weight: 300;
     color: #857344;
     text-transform: uppercase;
     line-height: 1.15;
     margin-bottom: 30px;
+    font-family: "Canela-Light", serif;
 }
 
 .room-description {
-    font-size: 17px;
+    font-size: 18px;
     line-height: 1.9;
     color: #5c5c5c;
     text-align: justify;
     margin-bottom: 16px;
+    font-family: "Canela-Light", serif;
 }
 
 /* ---- Amenities ---- */
@@ -358,8 +369,9 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 15px;
+    font-size: 18px;
     color: #5c5c5c;
+    font-family: "Canela-Light", serif;
 }
 
 .amenity-item svg { flex-shrink: 0; color: #857344; }
@@ -409,11 +421,12 @@ body {
 }
 
 .room-cta-section h2 {
-    font-size: 42px;
+    font-size: 48px;
     font-weight: 300;
     color: white;
     text-transform: uppercase;
     margin-bottom: 40px;
+    font-family: "Canela-Light", serif;
 }
 
 .cta-buttons {
@@ -503,10 +516,11 @@ body {
 
 .other-room-card-name {
     color: white;
-    font-size: 17px;
+    font-size: 20px;
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 0.08em;
+    font-family: "Canela-Light", serif;
 }
 
 /* ---- Footer ---- */
@@ -548,4 +562,32 @@ body {
     .other-rooms-grid { grid-template-columns: 1fr; }
     .room-stats { gap: 20px; }
     .gallery-thumbs img { width: 68px; height: 48px; }
+}
+
+@media (max-width: 480px) {
+    .header { padding: 15px 12px; }
+    .header.scrolled { padding: 12px 12px; }
+    .brand-title { font-size: 11px; }
+    .room-hero-title { font-size: 22px; }
+    .room-hero-overline { font-size: 10px; }
+    .gallery-section { padding: 30px 12px 0; }
+    .gallery-main { max-height: 300px; }
+    .room-details-section { padding: 40px 12px; }
+    .room-details-left h2 { font-size: 20px; margin-bottom: 20px; }
+    .room-details-left p { font-size: 13px; line-height: 1.6; }
+    .room-details-right { gap: 24px; }
+    .room-detail-group h4 { font-size: 12px; margin-bottom: 8px; }
+    .room-detail-group p { font-size: 12px; }
+    .room-amenity { font-size: 11px; }
+    .room-amenity::before { width: 4px; height: 4px; }
+    .other-rooms-section { padding: 40px 12px; }
+    .other-rooms-section h2 { font-size: 11px; margin-bottom: 32px; }
+    .other-rooms-grid { gap: 12px; }
+    .other-room-card { aspect-ratio: 3/2; }
+    .room-cta-section { padding: 40px 12px; }
+    .room-cta-section .cta-overline { font-size: 10px; margin-bottom: 12px; }
+    .room-cta-section h2 { font-size: 20px; margin-bottom: 24px; }
+    .cta-buttons { gap: 12px; }
+    .btn-book, .btn-back { padding: 12px 28px; font-size: 11px; }
+    .footer { padding: 16px 12px; font-size: 11px; }
 }

@@ -44,11 +44,11 @@
         }
 
         .contact-hero-overline {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Canela-Light', serif;
             font-size: 14px;
             letter-spacing: 0.15em;
             text-transform: uppercase;
-            color: #d4af37;
+            color: #857344;
             margin-bottom: 16px;
         }
 
@@ -114,7 +114,7 @@
         }
 
         .contact-details {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Canela-Light', serif;
             font-size: 14px;
             color: rgba(255, 255, 255, 0.9);
             line-height: 1.8;
@@ -129,11 +129,30 @@
             color: white;
             text-decoration: none;
             border-bottom: 1px solid white;
-            transition: all 0.3s ease;
+            transition: all 0.5s ease;
+            position: relative;
+            padding-bottom: 2px;
+            display: inline-block;
+        }
+
+        .contact-details a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: white;
+            transition: width 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
         .contact-details a:hover {
-            opacity: 0.8;
+            opacity: 1;
+            border-bottom: 1px solid transparent;
+        }
+
+        .contact-details a:hover::after {
+            width: 100%;
         }
 
         /* Contact Form */
@@ -149,7 +168,7 @@
         }
 
         .form-group label {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Canela-Light', serif;
             font-size: 12px;
             letter-spacing: 0.1em;
             text-transform: uppercase;
@@ -207,7 +226,7 @@
         }
 
         .contact-info-section-title {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Canela-Light', serif;
             font-size: 14px;
             letter-spacing: 0.15em;
             text-transform: uppercase;
@@ -216,10 +235,10 @@
         }
 
         .contact-info-section-text {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Canela-Light', serif;
             font-size: 14px;
             line-height: 1.8;
-            color: #504a23;
+            color: #5c5c5c;
         }
 
         /* Map Section */
@@ -250,7 +269,7 @@
             font-family: 'Canela-Light', 'Cormorant Garamond', serif;
             font-size: clamp(28px, 4vw, 48px);
             font-weight: 300;
-            color: #a08540;
+            color: #857344;
             margin-bottom: 60px;
             text-align: center;
             letter-spacing: 0.05em;
@@ -269,25 +288,25 @@
         }
 
         .arrival-method-title {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Canela-Light', serif;
             font-size: 13px;
             letter-spacing: 0.1em;
             text-transform: uppercase;
-            color: #d4af37;
+            color: #857344;
             margin-bottom: 16px;
             font-weight: 500;
         }
 
         .arrival-method-text {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Canela-Light', serif;
             font-size: 14px;
-            color: #504a23;
+            color: #5c5c5c;
             line-height: 1.8;
         }
 
         /* Newsletter Section */
         .newsletter-section {
-            background: #8a8f6a;
+            background: #504a23;
             padding: 80px 60px;
         }
 
@@ -306,11 +325,11 @@
         }
 
         .newsletter-overline {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Canela-Light', serif;
             font-size: 13px;
             letter-spacing: 0.15em;
             text-transform: uppercase;
-            color: #c9c9a8;
+            color: rgba(255, 255, 255, 0.7);
             margin-bottom: 16px;
         }
 
@@ -340,7 +359,7 @@
             border: none;
             border-bottom: 1px solid rgba(255, 255, 255, 0.5);
             padding: 12px 0;
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Canela-Light', serif;
             font-size: 14px;
             color: white;
             transition: border-color 0.3s ease;
@@ -403,7 +422,7 @@
         }
 
         .newsletter-links a {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Canela-Light', serif;
             font-size: 13px;
             color: rgba(255, 255, 255, 0.8);
             text-decoration: none;
@@ -573,7 +592,7 @@
                         </span>
                     </p>
                 </div>
-                <p style="font-family: 'Cormorant Garamond', serif; font-size: 13px; color: rgba(255, 255, 255, 0.8); line-height: 1.8;">Please contact the reception area, or fill the form. Information about other requests will be sent as soon as possible. You can also reach us through social media. By clicking the button below you confirm to have read our privacy policy.</p>
+                <p style="font-family: 'Canela-Light', serif; font-size: 13px; color: rgba(255, 255, 255, 0.8); line-height: 1.8;">Please contact the reception area, or fill the form. Information about other requests will be sent as soon as possible. You can also reach us through social media. By clicking the button below you confirm to have read our privacy policy.</p>
             </div>
 
             <form class="contact-form">
@@ -682,7 +701,7 @@
         }
 
         .arrival-title {
-            font-family: "Cormorant Garamond", serif;
+            font-family: "Canela-Light", serif;
             font-size: 36px;
             color: #857344;
             text-align: center;
@@ -709,7 +728,7 @@
         }
 
         .arrival-method-title {
-            font-family: "Cormorant Garamond", serif;
+            font-family: "Canela-Light", serif;
             font-size: 18px;
             color: #857344;
             font-weight: 600;
@@ -719,7 +738,7 @@
         }
 
         .arrival-method-text {
-            font-family: "Cormorant Garamond", serif;
+            font-family: "Canela-Light", serif;
             font-size: 16px;
             color: #5a5a5a;
             line-height: 1.8;
